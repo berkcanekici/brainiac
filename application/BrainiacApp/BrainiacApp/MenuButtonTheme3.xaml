@@ -17,7 +17,7 @@
                             <Image
                                 HorizontalAlignment="Left"
                                 Margin="10,0,0,0"
-                                Height="20">
+                                Height="22">
                                 <Image.Source>
                                     <BitmapImage  
                                         UriSource="/Icons/bulletList.png" />
@@ -27,7 +27,7 @@
                             <TextBlock 
                                 Text="{TemplateBinding Property=Content}"
                                 VerticalAlignment="Center"
-                                Margin="40,0,0,0"/>
+                                Margin="42,0,0,0"/>
                         </Grid> 
                     </ControlTemplate>
                 </Setter.Value>
