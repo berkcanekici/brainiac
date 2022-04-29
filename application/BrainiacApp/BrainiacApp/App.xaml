@@ -7,6 +7,10 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/BrainiacApp;component/MyResourceDictionaryWindowStyle.xaml"/>
+                <ResourceDictionary Source="/BrainiacApp;component/MenuButtonTheme1.xaml"/>
+                <ResourceDictionary Source="/BrainiacApp;component/MenuButtonTheme2.xaml"/>
+                <ResourceDictionary Source="/BrainiacApp;component/MenuButtonTheme3.xaml"/>
+                <ResourceDictionary Source="/BrainiacApp;component/MenuButtonTheme4.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -10,6 +10,108 @@
         Height="820" Width="1160" WindowStartupLocation="CenterScreen">
 
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="192"
+                />
+            <ColumnDefinition
+                Width="3"
+                />
+            <ColumnDefinition
+                Width="15"
+                />
+            <ColumnDefinition
+                Width="3"
+                />
+            <ColumnDefinition
+                />
+        </Grid.ColumnDefinitions>
+
+
+        <Grid
+            Grid.Column="0"
+            Background="#071E3D">
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="180"
+                    />
+                <RowDefinition
+                    />
+            </Grid.RowDefinitions>
+
+            <Image>
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/logo.png" />
+                </Image.Source>
+            </Image>
+
+            <StackPanel
+                Grid.Row="1">
+
+                <RadioButton
+                    Height="50"
+                    Content="Home"
+                    FontSize="16"
+                    Foreground="White"
+                    IsChecked="True"
+                    Style="{StaticResource MenuButtonTheme1}">
+                </RadioButton>
+
+                <RadioButton
+                    Height="50"
+                    Content="Test"
+                    FontSize="16"
+                    Foreground="White"
+                    Style="{StaticResource MenuButtonTheme2}"
+                    />
+
+                <RadioButton
+                    Height="50"
+                    Content="About Brainiac"
+                    FontSize="16"
+                    Foreground="White"
+                    Style="{StaticResource MenuButtonTheme3}"
+                    />
+
+                <RadioButton
+                    Height="50"
+                    Content="About Skills"
+                    FontSize="16"
+                    Foreground="White"
+                    Style="{StaticResource MenuButtonTheme3}"
+                    />
+
+                <RadioButton
+                    Height="50"
+                    Content="Help Center"
+                    FontSize="16"
+                    Foreground="White"
+                    Style="{StaticResource MenuButtonTheme4}"
+                    />
+
+            </StackPanel>
+        </Grid>
+
+        <Rectangle Grid.Column="1" Grid.RowSpan="1000">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#17B978" Offset="0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Column="3" Grid.RowSpan="1000">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#086972" Offset="0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
     </Grid>
+    
 </Window>

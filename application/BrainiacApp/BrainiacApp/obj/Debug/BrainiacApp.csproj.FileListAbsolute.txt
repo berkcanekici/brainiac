@@ -17,3 +17,7 @@ C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MyResourceDictionaryWindowStyle.g.cs
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\App.baml
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MyResourceDictionaryWindowStyle.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MenuButtonTheme4.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MenuButtonTheme3.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MenuButtonTheme2.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MenuButtonTheme1.baml
