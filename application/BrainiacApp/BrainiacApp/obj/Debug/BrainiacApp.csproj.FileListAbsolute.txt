@@ -14,3 +14,6 @@ C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.CoreCompileInputs.cache
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.exe
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.pdb
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MyResourceDictionaryWindowStyle.g.cs
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\App.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MyResourceDictionaryWindowStyle.baml
