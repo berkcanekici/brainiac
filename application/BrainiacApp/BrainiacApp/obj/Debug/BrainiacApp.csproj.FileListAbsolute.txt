@@ -1,0 +1,16 @@
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\BrainiacApp.exe.config
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\BrainiacApp.exe
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\BrainiacApp.pdb
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.AssemblyReference.cache
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MainWindow.g.cs
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\App.g.cs
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp_MarkupCompile.cache
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp_MarkupCompile.lref
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\MainWindow.baml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.g.resources
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.Properties.Resources.resources
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.GenerateResource.cache
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.CoreCompileInputs.cache
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.exe
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.pdb
