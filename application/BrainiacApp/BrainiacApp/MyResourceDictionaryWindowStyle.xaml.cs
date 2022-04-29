@@ -22,15 +22,7 @@ namespace BrainiacApp
 
         private void MaximizeRestoreClick(object sender, RoutedEventArgs e)
         {
-            var window = (Window)((FrameworkElement)sender).TemplatedParent;
-            if (window.WindowState == System.Windows.WindowState.Normal)
-            {
-                window.WindowState = System.Windows.WindowState.Maximized;
-            }
-            else
-            {
-                window.WindowState = System.Windows.WindowState.Normal;
-            }
+            
         }
 
         private void MinimizeClick(object sender, RoutedEventArgs e)

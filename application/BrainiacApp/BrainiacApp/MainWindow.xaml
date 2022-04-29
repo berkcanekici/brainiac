@@ -28,6 +28,45 @@
                 />
         </Grid.ColumnDefinitions>
 
+        <Grid
+            Grid.Column="4">
+
+            <Image Margin="0,-10,632,634">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sol.png" />
+                </Image.Source>
+            </Image>
+
+
+            <Image Margin="633,-174,0,469">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+                </Image.Source>
+            </Image>
+
+            <Image Margin="0,-10,632,634">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sol.png" />
+                </Image.Source>
+            </Image>
+
+
+            <Image Margin="633,-174,0,469">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+                </Image.Source>
+            </Image>
+
+            <Frame 
+                NavigationUIVisibility="Hidden"
+                x:Name="MainFrame" Grid.ColumnSpan="2"/>
+
+        </Grid>
+
 
         <Grid
             Grid.Column="0"
@@ -52,43 +91,53 @@
                 Grid.Row="1">
 
                 <RadioButton
+                    Name="home"
                     Height="55"
                     Content="Home"
                     FontSize="17"
                     Foreground="White"
                     IsChecked="True"
+                    Checked="RadioButton_Checked"
                     Style="{StaticResource MenuButtonTheme1}">
                 </RadioButton>
 
                 <RadioButton
+                    Name="test"
                     Height="55"
                     Content="Test"
                     FontSize="17"
                     Foreground="White"
+                    Checked="RadioButton_Checked"
                     Style="{StaticResource MenuButtonTheme2}"
                     />
 
                 <RadioButton
+                    Name="aboutBrainiac"
                     Height="55"
                     Content="About Brainiac"
                     FontSize="17"
                     Foreground="White"
+                    Checked="RadioButton_Checked"
                     Style="{StaticResource MenuButtonTheme3}"
                     />
 
                 <RadioButton
+                    Name="aboutSkills"
                     Height="55"
                     Content="About Skills"
                     FontSize="17"
                     Foreground="White"
+                    Checked="RadioButton_Checked"
                     Style="{StaticResource MenuButtonTheme3}"
                     />
 
                 <RadioButton
+                    Name="helpCenter"
                     Height="55"
                     Content="Help Center"
                     FontSize="17"
                     Foreground="White"
+                    Checked="RadioButton_Checked"
                     Style="{StaticResource MenuButtonTheme4}"
                     />
 
@@ -113,5 +162,5 @@
 
 
     </Grid>
-    
+
 </Window>

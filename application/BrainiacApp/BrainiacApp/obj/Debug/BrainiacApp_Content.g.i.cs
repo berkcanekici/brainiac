@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/computer-network-internet-web-browser-abstract-network-planning-and-design" +
-    "-others-ba0fc50f23970613d3166b2095a30d5d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sa%c4%9f.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sol.png")]
 
 

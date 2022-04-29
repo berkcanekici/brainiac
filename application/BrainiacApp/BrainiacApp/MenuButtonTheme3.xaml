@@ -16,7 +16,7 @@
 
                             <Image
                                 HorizontalAlignment="Left"
-                                Margin="10,0,0,0"
+                                Margin="13,0,0,0"
                                 Height="22">
                                 <Image.Source>
                                     <BitmapImage  
@@ -27,7 +27,7 @@
                             <TextBlock 
                                 Text="{TemplateBinding Property=Content}"
                                 VerticalAlignment="Center"
-                                Margin="42,0,0,0"/>
+                                Margin="45,0,0,0"/>
                         </Grid> 
                     </ControlTemplate>
                 </Setter.Value>
