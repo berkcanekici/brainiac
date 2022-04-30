@@ -54,11 +54,26 @@ namespace BrainiacApp
         private void EnglishSelected(object sender, RoutedEventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+            if(test1!=null)
+                test1.setLanguage("en-US");
+            if(test2!=null)
+                test2.setLanguage("en-US");
+            if(test3!=null)
+                test3.setLanguage("en-US");
+            if(test4!=null)
+                test4.setLanguage("en-US");
+            if(test5!=null)
+                test5.setLanguage("en-US");
         }
 
         private void TurkishSelected(object sender, RoutedEventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("tr-TR");
+            test1.setLanguage("tr-TR");
+            test2.setLanguage("tr-TR");
+            test3.setLanguage("tr-TR");
+            test4.setLanguage("tr-TR");
+            test5.setLanguage("tr-TR");
         }
 
         private void OnStart(object sender, RoutedEventArgs e)
