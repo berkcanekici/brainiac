@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
+using System.Globalization;
 
 namespace BrainiacApp
 {
@@ -23,6 +25,11 @@ namespace BrainiacApp
         public Test2()
         {
             InitializeComponent();
+            this.FontFamily = new FontFamily("Alata");
+        }
+        public void setLanguage(String lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(lang);
         }
     }
 }
