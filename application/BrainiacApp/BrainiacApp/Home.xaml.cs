@@ -18,11 +18,24 @@ namespace BrainiacApp
     /// <summary>
     /// Home.xaml etkileşim mantığı
     /// </summary>
+
     public partial class Home : Page
     {
-        public Home()
+        private MainWindow mainWind;
+        public Home(MainWindow wind)
         {
+            mainWind = wind;
             InitializeComponent();
+        }
+
+        private void GoToTest(object sender, RoutedEventArgs e)
+        {
+            mainWind.CheckTest();
+        }
+
+        private void GoToInfo(object sender, RoutedEventArgs e)
+        {
+            mainWind.CheckInfo();
         }
     }
 }

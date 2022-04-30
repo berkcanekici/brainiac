@@ -168,5 +168,11 @@
     <Resource Include="Images\sağ.png" />
     <Resource Include="Images\sol.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\homeBg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\transparentHomeBg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

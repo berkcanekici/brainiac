@@ -20,20 +20,30 @@ namespace BrainiacApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Page Home;
-        private Page Test;
-        private Page AboutBrainiac;
-        private Page AboutSkills;
-        private Page HelpCenter;
+        private Home Home;
+        private Test Test;
+        private AboutBrainiac AboutBrainiac;
+        private AboutSkills AboutSkills;
+        private HelpCenter HelpCenter;
         public MainWindow()
         {
             InitializeComponent();
-            Home = new Home();
+            Home = new Home(this);
             Test = new Test();
             AboutBrainiac = new AboutBrainiac();
             AboutSkills = new AboutSkills();
             HelpCenter = new HelpCenter();
             MainFrame.NavigationService.Navigate(Home);
+        }
+
+        public void CheckTest()
+        {
+            test.IsChecked = true;
+        }
+
+        public void CheckInfo()
+        {
+            aboutSkills.IsChecked = true;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)

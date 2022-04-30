@@ -6,14 +6,165 @@
       xmlns:local="clr-namespace:BrainiacApp"
       mc:Ignorable="d" 
       d:DesignHeight="835" d:DesignWidth="1180"
-      Title="Home"
-      Background="Transparent">
+      Title="Home">
 
     <Grid>
+
         <TextBlock
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Text="Home"
-            Foreground="White"/>
+            Text="Hello"
+            Foreground="Wheat"/>
+
+        <Image
+           HorizontalAlignment="Stretch" 
+           VerticalAlignment="Stretch"
+           Stretch="Fill">
+            <Image.Source>
+                <BitmapImage  
+                        UriSource="/Images/homeBg.jpg" />
+            </Image.Source>
+        </Image>
+
+        <Image Margin="0,0,669,662">
+            <Image.Source>
+                <BitmapImage  
+                        UriSource="/Images/sol.png" />
+            </Image.Source>
+        </Image>
+
+
+        <Image Margin="664,-167,0,492">
+            <Image.Source>
+                <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+            </Image.Source>
+        </Image>
+
+        <Image Margin="0,0,669,662">
+            <Image.Source>
+                <BitmapImage  
+                        UriSource="/Images/sol.png" />
+            </Image.Source>
+        </Image>
+
+
+        <Image Margin="664,-167,0,492">
+            <Image.Source>
+                <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+            </Image.Source>
+        </Image>
+
+        <StackPanel>
+
+            <TextBlock
+                Text="Welcome to Brainiac"
+                Foreground="White"
+                FontSize="52"
+                HorizontalAlignment="Center"
+                Margin="0,63,0,0"/>
+
+            <Rectangle
+                Width="739"
+                Height="3"
+                Fill="#17B978"
+                />
+
+            <Grid
+                Height="530"
+                Margin="0,1,0,0">
+
+                <Image
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"
+                    Stretch="Fill">
+                    <Image.Source>
+                        <BitmapImage  
+                         UriSource="/Images/transparentHomeBg.png" />
+                    </Image.Source>
+                </Image>
+
+                <StackPanel>
+
+                    <TextBlock
+                        Margin="100,20,100,0"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Text="Here you can take our specially prepared test&#x0a;and learn more about yourself"
+                        Foreground="White"
+                        FontSize="26"/>
+
+                    <TextBlock
+                        Margin="100,15,100,20"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Text="This test is created by our team to test your&#x0a;Mental Imagery Skills, Creativity, Long Term &amp;&#x0a;Working Memory Skills, Response Speed&#x0a;and Accuracy."
+                        Foreground="White"
+                        FontSize="26"/>
+
+                    <Rectangle
+                        Width="597"
+                        Height="2"
+                        Fill="#17B978"
+                        />
+
+                    <TextBlock
+                        Margin="100,20,100,15"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Text="To start the test right now click here"
+                        Foreground="White"
+                        FontSize="26"/>
+
+                    <Button
+                        Width="245"
+                        Height="47" 
+                        BorderThickness="0,0,0,0" 
+                        Background="#086972"
+                        Click="GoToTest">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="23"/>
+                            </Style>
+                        </Button.Resources>
+
+                        <TextBlock
+                            Text="Take Me to the Test"
+                            FontSize="16"
+                            Foreground="White"/>
+                    </Button>
+
+                    <TextBlock
+                        Margin="100,15,100,15"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Text="To get more information click here"
+                        Foreground="White"
+                        FontSize="26"/>
+
+                    <Button
+                        Width="245"
+                        Height="47" 
+                        BorderThickness="0,0,0,0" 
+                        Background="#086972"
+                        Click="GoToInfo">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="23"/>
+                            </Style>
+                        </Button.Resources>
+
+                        <TextBlock
+                            Text="Give Me Information"
+                            FontSize="16"
+                            Foreground="White"/>
+                    </Button>
+
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
     </Grid>
 </Page>

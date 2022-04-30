@@ -31,7 +31,7 @@
         <Grid
             Grid.Column="4">
 
-            <Image Margin="0,-10,632,634">
+            <Image Margin="0,0,669,662">
                 <Image.Source>
                     <BitmapImage  
                         UriSource="/Images/sol.png" />
@@ -39,14 +39,14 @@
             </Image>
 
 
-            <Image Margin="633,-174,0,469">
+            <Image Margin="664,-167,0,492">
                 <Image.Source>
                     <BitmapImage  
                         UriSource="/Images/sağ.png" />
                 </Image.Source>
             </Image>
 
-            <Image Margin="0,-10,632,634">
+            <Image Margin="0,0,669,662">
                 <Image.Source>
                     <BitmapImage  
                         UriSource="/Images/sol.png" />
@@ -54,12 +54,13 @@
             </Image>
 
 
-            <Image Margin="633,-174,0,469">
+            <Image Margin="664,-167,0,492">
                 <Image.Source>
                     <BitmapImage  
                         UriSource="/Images/sağ.png" />
                 </Image.Source>
             </Image>
+
 
             <Frame 
                 NavigationUIVisibility="Hidden"
