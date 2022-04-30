@@ -11,10 +11,115 @@
 
     <Grid>
 
-        <TextBlock
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Text="AboutBrainiac"
-            Foreground="White"/>
+        <StackPanel>
+
+            <TextBlock
+                Text="About Brainiac"
+                Foreground="White"
+                FontSize="39"
+                HorizontalAlignment="Center"
+                Margin="0,50,0,30"/>
+
+            <Grid
+                Height="171">
+
+                <Rectangle
+                    Fill="Black"
+                    Opacity="0.35"/>
+
+                <StackPanel>
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        Text="Who is Brainiac?"
+                        FontSize="29"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                    <TextBlock
+                        Margin="0,5,0,0"
+                        TextAlignment="Center"
+                        Text="Brainiac is a company aiming to test people in various skills and show them how&#x0a;good they are at these skills. The skills that are chosen for testing are specially chosen. They are&#x0a;Mental Imagery Skills, Creativity, Long Term &amp; Working Memory Skills,&#x0a;Response Speed and Accuracy"
+                        FontSize="19"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+                        
+                </StackPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,20,0,20"
+                Width="680"
+                Height="2"
+                Fill="#17B978"
+                />
+
+            <Grid
+                Height="220">
+
+                <Rectangle
+                    Fill="Black"
+                    Opacity="0.35"/>
+
+                <StackPanel>
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        Text="Why did We Choose To Test These Skills?"
+                        FontSize="29"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                    <TextBlock
+                        Margin="0,5,0,0"
+                        TextAlignment="Center"
+                        Text="All of the skills are related to how fast a person can learn, how good they can perform. Moreover,&#x0a;all of them are open to training to get better at them. The reason why we thought choosing skills&#x0a;related to learning &amp; performing was a good idea was to inform people if they were lacking the&#x0a;skills and acknowledge them about the importance of these skills so that they can get better at them&#x0a;if they want to improve their learning speed &amp; performance. Also show them how they are&#x0a;compared to other people"
+                        FontSize="19"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,20,0,20"
+                Width="680"
+                Height="2"
+                Fill="#17B978"
+                />
+
+            <Grid
+                Height="145">
+
+                <Rectangle
+                    Fill="Black"
+                    Opacity="0.35"/>
+
+                <StackPanel>
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        Text="How to Contact Us?"
+                        FontSize="29"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                    <TextBlock
+                        Margin="0,5,0,0"
+                        TextAlignment="Center"
+                        Text="Website: http://brainiac.cf/index.html&#x0a;Our Email Address: companybrainiac@gmail.com&#x0a;Location: Cumhuriyet,2254.Street, Gebze/Kocaeli, 41400"
+                        FontSize="19"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+        
     </Grid>
+    
 </Page>

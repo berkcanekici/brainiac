@@ -10,10 +10,6 @@
 
     <Grid>
 
-        <TextBlock
-            Text="Hello"
-            Foreground="Wheat"/>
-
         <Image
            HorizontalAlignment="Stretch" 
            VerticalAlignment="Stretch"
