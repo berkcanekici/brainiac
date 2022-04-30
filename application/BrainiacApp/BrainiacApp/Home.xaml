@@ -82,7 +82,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="100,20,100,0"
+                        Margin="100,25,100,0"
                         HorizontalAlignment="Center"
                         TextAlignment="Center"
                         Text="Here you can take our specially prepared test&#x0a;and learn more about yourself"
@@ -90,7 +90,7 @@
                         FontSize="26"/>
 
                     <TextBlock
-                        Margin="100,15,100,20"
+                        Margin="100,15,100,25"
                         HorizontalAlignment="Center"
                         TextAlignment="Center"
                         Text="This test is created by our team to test your&#x0a;Mental Imagery Skills, Creativity, Long Term &amp;&#x0a;Working Memory Skills, Response Speed&#x0a;and Accuracy."
@@ -104,7 +104,7 @@
                         />
 
                     <TextBlock
-                        Margin="100,20,100,15"
+                        Margin="100,25,100,15"
                         HorizontalAlignment="Center"
                         TextAlignment="Center"
                         Text="To start the test right now click here"

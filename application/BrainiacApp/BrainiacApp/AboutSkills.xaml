@@ -48,18 +48,27 @@
                         Opacity="0.4"/>
 
                     <TextBlock
-                        Margin="0,20,0,10"
+                        Margin="0,30,0,10"
                         Text="Mental Imagery"
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="24"/>
 
                     <TextBlock
-                        Margin="0,60,0,0"
-                        Text="Mental imagery skill includes all the abilities of being&#x0a;able to visualize objects, people, action etc in mind&#x0a;without needing to see. For some people it is very&#x0a;common to visualize things in their minds and for&#x0a;some other people even the term of visualizing feel&#x0a;foreign. Mental imagery skills tend to be tied with&#x0a;having high imagination, being talented in arts and&#x0a;being a fast learner. It is also found out to be a very&#x0a;useful skill to increase learning and performance&#x0a;therefore it is advised to train this skill."
+                        Margin="0,70,0,0"
+                        Text="Mental imagery skill includes all the abilities of being&#x0a;able to visualize objects, people, action etc in 
+mind&#x0a;without needing to see. For some people it is very&#x0a;common to visualize things in their minds 
+and for&#x0a;some other people even the term of visualizing feel&#x0a;foreign. Mental imagery skills tend to 
+be tied with&#x0a;having high imagination, being talented in arts and&#x0a;being a fast learner. It is also 
+found out to be a very&#x0a;useful skill to increase learning and performance&#x0a;therefore it is advised to 
+train this skill."
                         TextAlignment="Center"
                         Foreground="White"
-                        FontSize="16"/>
+                        FontSize="16">
+                        <TextBlock.Style>
+                            <Style/>
+                        </TextBlock.Style>
+                    </TextBlock>
 
                 </Grid>
 
@@ -92,15 +101,20 @@
                         Opacity="0.4"/>
 
                     <TextBlock
-                        Margin="0,5,0,5"
+                        Margin="0,20,0,5"
                         Text="Long Term &amp; Working Memory"
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="24"/>
 
                     <TextBlock
-                        Margin="0,40,0,0"
-                        Text="Working memory is a mechanism to temporarily hold and&#x0a;manipulate information actively, and is considered to&#x0a;relate with activities in the PFC (Prefrontal Cortex). The&#x0a;cognitive functions of the brain, such as language,&#x0a;understanding, planning, reasoning, and problem-solving,&#x0a;need working memory. Therefore, it is also tied with long &#x0a;term memory because the brain requires old&#x0a;memory to manipulate newly acquired information. &#x0a;Working memory skills is important in terms of&#x0a;memorization skills.  Moreover, being able to associate&#x0a;long term memory with working memory is important&#x0a;for long term learning."
+                        Margin="0,60,0,0"
+                        Text="Working memory is a mechanism to temporarily hold and&#x0a;manipulate information actively, and is considered to&#x0a;relate with activities in the PFC (Prefrontal Cortex). The&#x0a;cognitive functions of 
+the brain, such as language,&#x0a;understanding, planning, reasoning, and problem-solving,&#x0a;need working memory. Therefore, it is also tied with long 
+&#x0a;term memory because the brain requires old&#x0a;memory to manipulate newly acquired 
+information. &#x0a;Working memory skills is important in terms of&#x0a;memorization skills.  Moreover, being 
+able to associate&#x0a;long term memory with working memory is important&#x0a;for long term learning.
+"
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="16"/>
@@ -139,15 +153,16 @@
                         Opacity="0.4"/>
 
                     <TextBlock
-                        Margin="0,45,0,10"
+                        Margin="0,60,0,10"
                         Text="Creativity"
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="24"/>
 
                     <TextBlock
-                        Margin="0,85,0,0"
-                        Text="Creativity is the act of turning new and imaginative&#x0a;ideas into reality. Creativity is characterised by &#x0a;the ability to perceive the world in new ways,&#x0a;to find hidden patterns, to make connections between&#x0a;seemingly unrelated phenomena, and to&#x0a;generate solutions. Creativity is an important skill for &#x0a;a person to be successful and for a society to develop,&#x0a;not stagnate."
+                        Margin="0,100,0,0"
+                        Text="Creativity is the act of turning new and imaginative&#x0a;ideas into reality. Creativity is characterised by 
+&#x0a;the ability to perceive the world in new ways,&#x0a;to find hidden patterns, to make connections between&#x0a;seemingly unrelated phenomena, and to&#x0a;generate solutions. Creativity is an important skill for &#x0a;a person to be successful and for a society to develop,&#x0a;not stagnate."
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="16"/>
@@ -161,11 +176,6 @@
                     Fill="#17B978"/>
 
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
 
                     <Image
                         Margin="15,8,25,0"
@@ -187,14 +197,14 @@
                         Opacity="0.4" Grid.ColumnSpan="3"/>
 
                     <TextBlock
-                        Margin="0,45,0,10"
+                        Margin="0,65,0,10"
                         Text="Response Speed &amp; Accuracy"
                         TextAlignment="Center"
                         Foreground="White"
                         FontSize="24" Grid.ColumnSpan="3"/>
 
                     <TextBlock
-                        Margin="0,85,0,0"
+                        Margin="0,105,0,0"
                         Text="Response speed refers to the amount of time that &#x0a;takes places between when we perceive something&#x0a;to when we respond to it and accuracy is the&#x0a;measure of correctness of the responses.&#x0a;Having a quick response time shows the speed&#x0a;of processing in the brain and regardless&#x0a;of the speed, the accuracy is important."
                         TextAlignment="Center"
                         Foreground="White"

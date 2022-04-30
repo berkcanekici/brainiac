@@ -30,7 +30,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         Text="Who is Brainiac?"
                         FontSize="29"
                         Foreground="White"
@@ -56,7 +56,7 @@
                 />
 
             <Grid
-                Height="220">
+                Height="213">
 
                 <Rectangle
                     Fill="Black"
@@ -65,7 +65,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         Text="Why did We Choose To Test These Skills?"
                         FontSize="29"
                         Foreground="White"
@@ -100,7 +100,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         Text="How to Contact Us?"
                         FontSize="29"
                         Foreground="White"

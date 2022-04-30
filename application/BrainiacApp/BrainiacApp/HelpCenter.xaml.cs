@@ -23,6 +23,7 @@ namespace BrainiacApp
         public HelpCenter()
         {
             InitializeComponent();
+            this.FontFamily = new FontFamily("Alata");
         }
     }
 }

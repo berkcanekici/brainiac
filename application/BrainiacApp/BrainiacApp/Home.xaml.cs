@@ -26,6 +26,7 @@ namespace BrainiacApp
         {
             mainWind = wind;
             InitializeComponent();
+            this.FontFamily = new FontFamily("Alata");
         }
 
         private void GoToTest(object sender, RoutedEventArgs e)

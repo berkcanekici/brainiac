@@ -28,6 +28,7 @@ namespace BrainiacApp
         public MainWindow()
         {
             InitializeComponent();
+            this.FontFamily = new FontFamily("Alata");
             Home = new Home(this);
             Test = new Test();
             AboutBrainiac = new AboutBrainiac();
