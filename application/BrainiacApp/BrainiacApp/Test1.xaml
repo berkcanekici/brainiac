@@ -26,7 +26,7 @@
             <TextBlock
                 Margin="30,20,30,0"
                 TextAlignment="Center"
-                Text="You will be given 6 instructions in total and for each&#x0a;instruction you will be given some time. During try&#x0a;not to think anything else. "
+                Text="You will be given 6 instructions in total and for each&#x0a;instruction you will be given some time. During test try&#x0a;not to think anything else. "
                 Foreground="White"
                 FontSize="26"/>
 
@@ -37,28 +37,17 @@
                 Foreground="White"
                 FontSize="26"/>
 
-            <Button
-                Width="200"
-                Height="47" 
-                BorderThickness="0,0,0,0" 
-                Background="#086972"
-                Click="StartTest1">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="23"/>
-                    </Style>
-                </Button.Resources>
-
-            <TextBlock
-                Text="Start"
-                FontSize="16"
-                Foreground="White"/>
-            </Button>
-
-
-
         </StackPanel>
-        
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="QuestionText"
+            Text="Question 1 of Test 1"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+
     </Grid>
     
 </Page>

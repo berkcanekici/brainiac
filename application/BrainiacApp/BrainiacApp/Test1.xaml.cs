@@ -32,9 +32,10 @@ namespace BrainiacApp
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(lang);
         }
-        private void StartTest1(object sender, RoutedEventArgs e)
+        public void StartTest1()
         {
-            
+            Introduction.Visibility = Visibility.Collapsed;
+            QuestionText.Visibility = Visibility.Visible;
         }
     }
 }
