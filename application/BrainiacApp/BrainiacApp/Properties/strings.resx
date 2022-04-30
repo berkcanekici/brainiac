@@ -120,4 +120,23 @@
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
   </data>
+  <data name="T1Info1" xml:space="preserve">
+    <value>During this test, you need to keep your eyes closed.
+You will hear some instructions and take actions
+accordingly. These instructions will be related to
+thinking or imagining objects/scenarios.</value>
+  </data>
+  <data name="T1Info2" xml:space="preserve">
+    <value>You will be given 6 instructions in total and for each
+instruction you will be given some time. During test try
+not to think anything else.</value>
+  </data>
+  <data name="T1Info3" xml:space="preserve">
+    <value>Between instructions you will be given 5 seconds
+resting time. During that time keep your eyes closed
+and try not to think anything.</value>
+  </data>
+  <data name="T1Q1" xml:space="preserve">
+    <value>Question1 of Test1</value>
+  </data>
 </root>

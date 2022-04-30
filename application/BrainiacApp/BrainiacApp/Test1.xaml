@@ -17,23 +17,26 @@
             VerticalAlignment="Center">
 
             <TextBlock
+                Name="T1Info1"
                 Margin="30,0,30,0"
                 TextAlignment="Center"
-                Text="During this test, you need to keep your eyes closed.&#x0a;You will hear some instructions and take actions&#x0a;accordingly. These instructions will be related to&#x0a;thinking or imagining objects/scenarios."
+                Text="Q1Info1"
                 Foreground="White"
                 FontSize="26"/>
 
             <TextBlock
+                Name="T1Info2"
                 Margin="30,20,30,0"
                 TextAlignment="Center"
-                Text="You will be given 6 instructions in total and for each&#x0a;instruction you will be given some time. During test try&#x0a;not to think anything else. "
+                Text="Q1Info2"
                 Foreground="White"
                 FontSize="26"/>
 
             <TextBlock
+                Name="T1Info3"
                 Margin="30,20,30,20"
                 TextAlignment="Center"
-                Text="Between instructions you will be given 5 seconds&#x0a;resting time. During that time keep your eyes closed&#x0a;and try not to think anything."
+                Text="Q1Info3"
                 Foreground="White"
                 FontSize="26"/>
 
@@ -42,7 +45,7 @@
         <TextBlock
             Visibility="Collapsed"
             Name="QuestionText"
-            Text="Question 1 of Test 1"
+            Text="Question"
             Foreground="White"
             TextAlignment="Center"
             VerticalAlignment="Center"

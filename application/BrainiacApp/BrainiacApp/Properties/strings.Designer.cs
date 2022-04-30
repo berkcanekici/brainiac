@@ -68,5 +68,48 @@ namespace BrainiacApp.Properties {
                 return ResourceManager.GetString("Hello", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   During this test, you need to keep your eyes closed.
+        ///You will hear some instructions and take actions
+        ///accordingly. These instructions will be related to
+        ///thinking or imagining objects/scenarios. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Info1 {
+            get {
+                return ResourceManager.GetString("T1Info1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You will be given 6 instructions in total and for each
+        ///instruction you will be given some time. During test try
+        ///not to think anything else. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Info2 {
+            get {
+                return ResourceManager.GetString("T1Info2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Between instructions you will be given 5 seconds
+        ///resting time. During that time keep your eyes closed
+        ///and try not to think anything. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Info3 {
+            get {
+                return ResourceManager.GetString("T1Info3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Question1 of Test1 benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Q1 {
+            get {
+                return ResourceManager.GetString("T1Q1", resourceCulture);
+            }
+        }
     }
 }

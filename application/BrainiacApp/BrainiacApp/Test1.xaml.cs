@@ -26,11 +26,16 @@ namespace BrainiacApp
         {
             InitializeComponent();
             this.FontFamily = new FontFamily("Alata");
+            setLanguage("en-Us");
         }
 
         public void setLanguage(String lang)
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(lang);
+            T1Info1.Text = Properties.strings.T1Info1;
+            T1Info2.Text = Properties.strings.T1Info2;
+            T1Info3.Text = Properties.strings.T1Info3;
+            QuestionText.Text = Properties.strings.T1Q1;
         }
         public void StartTest1()
         {
