@@ -24,10 +24,24 @@ namespace BrainiacApp
     public partial class Test : Page
     {
         private String userName;
+        private Test1 test1;
+        private Test2 test2;
+        private Test3 test3;
+        private Test4 test4;
+        private Test5 test5;
+        private int currentTest = 0;
+        private int currentQuestion = 0;
+        private int remainingInCurrentTest;
+
         public Test()
         {
             InitializeComponent();
             this.FontFamily = new FontFamily("Alata");
+            test1=new Test1();
+            test2=new Test2();  
+            test3=new Test3();  
+            test4=new Test4();  
+            test5=new Test5();
         }
 
         private void NameTextboxClicked(object sender, RoutedEventArgs e)
@@ -55,6 +69,34 @@ namespace BrainiacApp
                 FirstPage.Visibility = Visibility.Collapsed;
                 LeftBar.Visibility = Visibility.Visible;
                 QuestionFrame.Visibility = Visibility.Visible;
+                changeTest();
+                QuestionFrame.NavigationService.Navigate(test1);
+            }
+        }
+
+        private void changeTest()
+        {
+            //TODO
+            currentTest++;
+            if(currentTest==1)
+            {
+
+            }
+            else if(currentTest==2)
+            {
+
+            }
+            else if(currentTest==3)
+            {
+
+            }
+            else if(currentTest==4)
+            {
+
+            }
+            else if(currentTest==5)
+            {
+
             }
         }
 
