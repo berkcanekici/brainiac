@@ -186,5 +186,23 @@
   <ItemGroup>
     <Resource Include="Images\response.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mental2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rorsch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dual.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\verb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\goNoGo.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

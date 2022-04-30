@@ -10,10 +10,266 @@
       Background="Transparent">
 
     <Grid>
-        <TextBlock
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Text="Help Center"
-            Foreground="White"/>
+
+        <StackPanel>
+
+            <Grid>
+
+                <Grid
+                    Margin="20,15,20,0"
+                    Height="134"
+                    Background="Black"
+                    Opacity="0.4"/>
+
+                <DockPanel
+                    LastChildFill="False"
+                    Margin="20,15,20,0">
+
+                    <DockPanel
+                        Margin="20,0,0,0">
+
+                        <TextBlock
+                            DockPanel.Dock="Top"
+                            Margin="0,12,0,0"
+                            Text="Mental Imagery Test"
+                            FontSize="23"
+                            Foreground="White"/>
+
+                        <TextBlock
+                            Margin="0,5,0,0"
+                            Text="During this test, you need to close your eyes. While your eyes are closed, the test&#x0a;instructions and time will be given to you vocally. You will be given some&#x0a;objects/scenarios to imagine in your mind. You should not distract your mind with&#x0a;other thoughts during the process."
+                            FontSize="16"
+                            Foreground="White"/>
+
+                    </DockPanel>
+                    <Image
+                        Margin="0,0,20,0"
+                        DockPanel.Dock="Right"
+                        Height="108"
+                        Width="228"
+                        Stretch="Fill">
+                        <Image.Source>
+                            <BitmapImage  
+                         UriSource="/Images/mental2.jpg" />
+                        </Image.Source>
+                    </Image>
+
+                </DockPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,10,0,10"
+                Fill="#17B978"
+                Height="3"
+                Width="640"/>
+            
+            <Grid>
+
+                <Grid
+                    Margin="20,0,20,0"
+                    Height="134"
+                    Background="Black"
+                    Opacity="0.4"/>
+
+                <DockPanel
+                    Margin="20,0,20,0">
+
+                    <Image
+                        Margin="20,0,0,0"
+                        DockPanel.Dock="Left"
+                        Height="108"
+                        Width="228"
+                        Stretch="Fill">
+                        <Image.Source>
+                            <BitmapImage  
+                         UriSource="/Images/rorsch.jpg" />
+                        </Image.Source>
+                    </Image>
+
+                    <DockPanel
+                        Margin="0,0,20,0">
+
+                        <TextBlock
+                            TextAlignment="Right"
+                            DockPanel.Dock="Top"
+                            Margin="0,12,0,0"
+                            Text="Rorschach Test"
+                            FontSize="23"
+                            Foreground="White"/>
+
+                        <TextBlock
+                            TextAlignment="Right"
+                            DockPanel.Dock="Bottom"
+                            Margin="0,5,0,0"
+                            Text="During this test, you will be shown RIM cards and you will be asked what the cards&#x0a;resemble to you. While answering, you should really focus on the card. You will have&#x0a;20 seconds to answer. Do not lose focus during the 20 seconds. You will be given&#x0a;10 seconds rest time. It is adviced to free up your mind during the 10 seconds."
+                            FontSize="16"
+                            Foreground="White"/>
+
+                    </DockPanel>
+
+                </DockPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,10,0,10"
+                Fill="#17B978"
+                Height="3"
+                Width="640"/>
+
+            <Grid>
+
+                <Grid
+                    Margin="20,0,20,0"
+                    Height="134"
+                    Background="Black"
+                    Opacity="0.4"/>
+
+                <DockPanel
+                    LastChildFill="False"
+                    Margin="20,0,20,0">
+
+                    <DockPanel
+                        Margin="20,0,0,0">
+
+                        <TextBlock
+                            DockPanel.Dock="Top"
+                            Margin="0,12,0,0"
+                            Text="Dual N-Back Test"
+                            FontSize="23"
+                            Foreground="White"/>
+
+                        <TextBlock
+                            Margin="0,5,0,0"
+                            Text="You will have a 3x3 board which is formed by squares. Each square will have a&#x0a;specific letter. Each time, a square will be chosen and a letter will be called. After 2 turns,&#x0a;you will be asked if the square that is being shown and the letter that is being called are&#x0a;the same as the ones from 2 turns ago. You will select the matching amounts."
+                            FontSize="16"
+                            Foreground="White"/>
+
+                    </DockPanel>
+                    <Image
+                        Margin="0,0,20,0"
+                        DockPanel.Dock="Right"
+                        Height="108"
+                        Width="228"
+                        Stretch="Fill">
+                        <Image.Source>
+                            <BitmapImage  
+                         UriSource="/Images/dual.png" />
+                        </Image.Source>
+                    </Image>
+
+                </DockPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,10,0,10"
+                Fill="#17B978"
+                Height="3"
+                Width="640"/>
+
+            <Grid>
+
+                <Grid
+                    Margin="20,0,20,0"
+                    Height="134"
+                    Background="Black"
+                    Opacity="0.4"/>
+
+                <DockPanel
+                    Margin="20,0,20,0">
+
+                    <Image
+                        Margin="20,0,0,0"
+                        DockPanel.Dock="Left"
+                        Height="108"
+                        Width="228"
+                        Stretch="Fill">
+                        <Image.Source>
+                            <BitmapImage  
+                         UriSource="/Images/verb.png" />
+                        </Image.Source>
+                    </Image>
+
+                    <DockPanel
+                        Margin="0,0,20,0">
+
+                        <TextBlock
+                            TextAlignment="Right"
+                            DockPanel.Dock="Top"
+                            Margin="0,12,0,0"
+                            Text="Verb Generation Test"
+                            FontSize="23"
+                            Foreground="White"/>
+
+                        <TextBlock
+                            TextAlignment="Right"
+                            DockPanel.Dock="Bottom"
+                            Margin="0,5,0,0"
+                            Text="During this test, we will tell you various nouns and require you to write a verb that&#x0a;comes into your mind after hearing the nouns. However, you should try to think of&#x0a;verbs that do not come into mind the first. You will have limited time for each word.&#x0a;If you do not write anything, it will be noted as you failed."
+                            FontSize="16"
+                            Foreground="White"/>
+
+                    </DockPanel>
+
+                </DockPanel>
+
+            </Grid>
+
+            <Rectangle
+                Margin="0,10,0,10"
+                Fill="#17B978"
+                Height="3"
+                Width="640"/>
+
+            <Grid>
+
+                <Grid
+                    Margin="20,0,20,0"
+                    Height="134"
+                    Background="Black"
+                    Opacity="0.4"/>
+
+                <DockPanel
+                    LastChildFill="False"
+                    Margin="20,0,20,0">
+
+                    <DockPanel
+                        Margin="20,0,0,0">
+
+                        <TextBlock
+                            DockPanel.Dock="Top"
+                            Margin="0,12,0,0"
+                            Text="Go/No-Go Test"
+                            FontSize="23"
+                            Foreground="White"/>
+
+                        <TextBlock
+                            Margin="0,5,0,0"
+                            Text="During this test, there will be a pop up on the screen saying either press or not&#x0a;press. The pop ups will be random. After seeing these pop ups you need to do&#x0a;what it says you to do. If it says you to press, then you need to press the button&#x0a;you see as soon as possible."
+                            FontSize="16"
+                            Foreground="White"/>
+
+                    </DockPanel>
+                    <Image
+                        Margin="0,0,20,0"
+                        DockPanel.Dock="Right"
+                        Height="108"
+                        Width="228"
+                        Stretch="Fill">
+                        <Image.Source>
+                            <BitmapImage  
+                         UriSource="/Images/goNoGo.jpeg" />
+                        </Image.Source>
+                    </Image>
+
+                </DockPanel>
+
+            </Grid>
+
+        </StackPanel>
+        
     </Grid>
+    
 </Page>
