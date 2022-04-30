@@ -32,5 +32,9 @@ namespace BrainiacApp
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(lang);
         }
+        private void StartTest1(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
