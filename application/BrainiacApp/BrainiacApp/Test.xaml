@@ -10,10 +10,201 @@
       Background="Transparent">
 
     <Grid>
+
         <TextBlock
-            VerticalAlignment="Center"
+            Margin="0,60,0,20"
             HorizontalAlignment="Center"
             Text="Test"
+            FontSize="39"
             Foreground="White"/>
+
+        <Grid
+            Height="530">
+
+            <Grid
+                Background="Black"
+                Opacity="0.35"/>
+
+            <Grid
+                Name="LeftBar"
+                Visibility="Collapsed"
+                HorizontalAlignment="Left"
+                Width="204"
+                Background="Black"
+                Opacity="0.25"/>
+
+            <StackPanel
+                Name="FirstPage"
+                Visibility="Visible">
+
+                <TextBlock
+                    Margin="0,27,0,0"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontSize="23"
+                    HorizontalAlignment="Center"
+                    Text="To start the test you need to enter your name and choose the language&#x0a;
+    you want the test to be in. "/>
+
+                <TextBlock
+                    Margin="0,13,0,0"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontSize="23"
+                    HorizontalAlignment="Center"
+                    Text="The test will have 5 different parts. Before each part, you will&#x0a;
+be given the needed instructions. If you want to see the instructions again,&#x0a;
+you can click Help Center."/>
+
+                <TextBlock
+                    Margin="0,13,0,0"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontSize="23"
+                    HorizontalAlignment="Center"
+                    Text="It is important that you obey the test rules and act accordingly."/>
+
+                <TextBlock
+                    Margin="0,13,0,17"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontSize="23"
+                    HorizontalAlignment="Center"
+                    Text="You can pause the test at anytime however, it is dicouraged."/>
+
+                <Rectangle
+                    Height="2"
+                    Width="471"
+                    Fill="#17B978"/>
+
+                <Grid
+                    Height="163"
+                    Width="471">
+
+                    <Grid
+                        Background="#086972"
+                        Opacity="0.4"/>
+
+                    <StackPanel>
+
+                        <TextBlock
+                            Margin="0,15,0,7"
+                            HorizontalAlignment="Center"
+                            Text="Choose Language"
+                            Foreground="White"
+                            FontSize="19"/>
+
+                        <StackPanel
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+
+                            <StackPanel.Resources>
+                                <Style x:Key="Flag" TargetType="RadioButton">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsChecked" Value="False">
+                                            <Setter Property="Opacity" Value="0.5"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="BorderThickness" Value="2"/>
+
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="RadioButton">
+                                                <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    Background="Transparent"
+                                                    CornerRadius="20">
+                                                    <Image Source="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </StackPanel.Resources>
+
+                            <RadioButton
+                                Margin="0,0,10,7"
+                                Name="English"
+                                Content="/Images/english.png"
+                                Height="60"
+                                Width="60"
+                                IsChecked="True"
+                                Checked="EnglishSelected"
+                                BorderBrush="Transparent"
+                                Style="{StaticResource Flag}"
+                                />
+
+                            <RadioButton
+                                Margin="10,0,0,7"
+                                Name="Turkish"
+                                Content="/Images/turkish.png"
+                                Height="60"
+                                BorderBrush="Transparent"
+                                Checked="TurkishSelected"
+                                Style="{StaticResource Flag}"
+                                Width="60"/>
+
+                        </StackPanel>
+
+                        <TextBox
+                            Name="NameEnterBox"
+                            Width="200"
+                            Height="33"
+                            Background="#17B978"
+                            TextAlignment="Center"
+                            BorderThickness="0,0,0,0"
+                            VerticalContentAlignment="Center"
+                            Text="Enter Your Name Here"
+                            FontSize="16" Opacity="0.6"
+                            GotFocus="NameTextboxClicked">
+
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="17"/>
+                                </Style>
+                            </TextBox.Resources>
+
+                        </TextBox>
+
+                    </StackPanel>
+
+                </Grid>
+
+                <Rectangle
+                    Margin="0,0,0,17"
+                    Height="2"
+                    Width="471"
+                    Fill="#17B978"/>
+
+                <Button
+                    Width="200"
+                    Height="45" 
+                    BorderThickness="0,0,0,0" 
+                    Background="#086972"
+                    Click="OnStart">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="23"/>
+                        </Style>
+                    </Button.Resources>
+
+                    <TextBlock
+                        Text="Start"
+                        FontSize="16"
+                        Foreground="White"/>
+                </Button>
+
+            </StackPanel>
+
+            <Frame 
+                Visibility="Collapsed"
+                Margin="204,0,0,0"
+                NavigationUIVisibility="Hidden"
+                x:Name="QuestionFrame"/>
+
+        </Grid>
+
     </Grid>
+    
 </Page>

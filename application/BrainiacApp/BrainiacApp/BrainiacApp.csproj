@@ -64,6 +64,11 @@
     <Compile Include="HelpCenter.xaml.cs">
       <DependentUpon>HelpCenter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -144,6 +149,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\strings.tr.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -203,6 +213,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\goNoGo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\turkish.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
