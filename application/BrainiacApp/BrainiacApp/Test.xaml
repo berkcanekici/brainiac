@@ -26,12 +26,113 @@
                 Opacity="0.35"/>
 
             <Grid
-                Name="LeftBar"
-                Visibility="Collapsed"
-                HorizontalAlignment="Left"
                 Width="204"
-                Background="Black"
-                Opacity="0.25"/>
+                HorizontalAlignment="Left"
+                Name="LeftBar"
+                Visibility="Collapsed">
+
+                <Grid
+                    HorizontalAlignment="Left"
+                    Width="204"
+                    Background="Black"
+                    Opacity="0.25"/>
+
+                <StackPanel>
+
+                    <TextBlock
+                        Margin="0,20,0,5"
+                        HorizontalAlignment="Center"
+                        Text="Time Left"
+                        FontSize="23"
+                        Foreground="White"/>
+
+                    <!-- Progress Bar Here -->
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        Text="Test No"
+                        FontSize="23"
+                        Foreground="White"/>
+
+                    <TextBlock
+                        Name="testNo"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center"
+                        Text="1"
+                        FontSize="23"
+                        Foreground="#17B978"/>
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        Text="QuestionNo"
+                        FontSize="23"
+                        Foreground="White"/>
+
+                    <TextBlock
+                        Name="questionNo"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center"
+                        Text="0"
+                        FontSize="23"
+                        Foreground="#17B978"/>
+
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        Text="Remaining"
+                        FontSize="23"
+                        Foreground="White"/>
+
+                    <TextBlock
+                        Name="remaining"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center"
+                        Text="6"
+                        FontSize="23"
+                        Foreground="#17B978"/>
+
+                    <TextBlock
+                        Margin="0,10,0,5"
+                        HorizontalAlignment="Center"
+                        Text="Pause"
+                        FontSize="23"
+                        Foreground="White"/>
+
+                    <Button
+                        Margin="0,5,0,0"
+                        Width="70"
+                        Height="70" 
+                        BorderThickness="0,0,0,0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="35"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#086972"/>
+                                <GradientStop Color="#17B978" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+
+                        <Image
+                            Height="35"
+                            Width="35">
+                            <Image.Source>
+                                <BitmapImage  
+                                     UriSource="/Icons/pause.png" />
+                            </Image.Source>
+                        </Image>
+
+                    </Button>
+
+
+
+                </StackPanel>
+
+            </Grid>
 
             <StackPanel
                 Name="FirstPage"
@@ -206,5 +307,5 @@ you can click Help Center."/>
         </Grid>
 
     </Grid>
-    
+
 </Page>

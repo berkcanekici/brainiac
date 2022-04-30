@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/turkish.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/pause.png")]
 
 

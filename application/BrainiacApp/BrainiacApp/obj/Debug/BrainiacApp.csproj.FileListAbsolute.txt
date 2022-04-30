@@ -35,3 +35,10 @@ C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.Properties.strings.resources
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.Properties.strings.tr.resources
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\tr\BrainiacApp.resources.dll
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\XamlRadialProgressBar.DotNet.dll
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.CopyComplete
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Syncfusion.SfProgressBar.WPF.dll
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Syncfusion.Shared.WPF.dll
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Syncfusion.SfProgressBar.WPF.xml
+C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Syncfusion.Shared.WPF.xml
