@@ -136,6 +136,23 @@ düşünmemeye çalışmalısınız.</value>
 olacak. Bu süreçte beyninizi boşaltmaya çalışın.</value>
   </data>
   <data name="T1Q1" xml:space="preserve">
-    <value>Birinci testin birinci sorusu</value>
+    <value>“Bisiklet” objesi hakkında düşünün. Soru süresi
+boyunca düşünmeye devam edin.</value>
+  </data>
+  <data name="T1Q2" xml:space="preserve">
+    <value>Aklınızda “araba” objesini canlandırın. Soru
+süresi boyunca düşünmeye devam edin.</value>
+  </data>
+  <data name="T1Q3" xml:space="preserve">
+    <value>Aklınızda boğa kafasına sahip bir arı canlandırın.</value>
+  </data>
+  <data name="T1Q4" xml:space="preserve">
+    <value>İçinde bulunmayı çok isteyeceğiniz bir yer hayal edin.
+Bu yer gerçek hayatta bulunmamalı.</value>
+  </data>
+  <data name="T1Q5" xml:space="preserve">
+    <value>Aklınızda gerçekleşmemiş hayali bir olay canlandırın.
+Bu olay tamamen kurgu veya gerçek hayattan
+esinlenmiş olabilir.</value>
   </data>
 </root>

@@ -40,6 +40,24 @@
                 Foreground="White"
                 FontSize="26"/>
 
+            <Button
+                Width="200"
+                Height="47" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="StartTest1">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Start"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
         </StackPanel>
 
         <TextBlock

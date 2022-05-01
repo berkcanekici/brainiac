@@ -104,11 +104,51 @@ namespace BrainiacApp.Properties {
         }
         
         /// <summary>
-        ///   Question1 of Test1 benzeri yerelleştirilmiş bir dize arar.
+        ///   Think of the object “bike”. Keep thinking about it
+        ///for the whole duration of the question. benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string T1Q1 {
             get {
                 return ResourceManager.GetString("T1Q1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Visualize the object “car” in yor mind. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Q2 {
+            get {
+                return ResourceManager.GetString("T1Q2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Visualize a bumblebee with a head of bull in your head. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Q3 {
+            get {
+                return ResourceManager.GetString("T1Q3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Visualize an imaginary place you would love to be in.
+        ///This place should not exist in real world. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Q4 {
+            get {
+                return ResourceManager.GetString("T1Q4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Visualize an imaginary event in your mind. This
+        ///event should not have happened in real life. It can
+        ///be totally fiction or inspired from real life events. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T1Q5 {
+            get {
+                return ResourceManager.GetString("T1Q5", resourceCulture);
             }
         }
     }

@@ -37,11 +37,11 @@ namespace BrainiacApp
         {
             InitializeComponent();
             this.FontFamily = new FontFamily("Alata");
-            test1=new Test1();
-            test2=new Test2();  
-            test3=new Test3();  
-            test4=new Test4();  
-            test5=new Test5();
+            test1=new Test1(this);
+            test2=new Test2(this);  
+            test3=new Test3(this);  
+            test4=new Test4(this);  
+            test5=new Test5(this);
         }
 
         private void NameTextboxClicked(object sender, RoutedEventArgs e)
@@ -95,24 +95,83 @@ namespace BrainiacApp
             currentTest++;
             if(currentTest==1)
             {
-
+                currentQuestion = 0;
+                remainingInCurrentTest = 5;
             }
             else if(currentTest==2)
             {
-
+                currentQuestion = 0;
+                remainingInCurrentTest = 3;
             }
             else if(currentTest==3)
             {
-
+                currentQuestion = 0;
+                remainingInCurrentTest = 6;
             }
             else if(currentTest==4)
             {
-
+                currentQuestion = 0;
+                remainingInCurrentTest = 5;
             }
             else if(currentTest==5)
             {
-
+                currentQuestion = 0;
+                remainingInCurrentTest = 1;
             }
+        }
+
+        private void endTest()
+        {
+            //TODO
+            //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
+        }
+
+        public void initiateTest1()
+        {
+            //TODO
+            //Test 1 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
+            //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+
+            if (remainingInCurrentTest == -1)
+                changeTest();
+        }
+
+        public void initiateTest2()
+        {
+            //TODO
+            //Test 2 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
+            //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+
+            if (remainingInCurrentTest == -1)
+                changeTest();
+        }
+
+        public void initiateTest3()
+        {
+            //TODO
+            //Test 3 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
+            //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+
+            if (remainingInCurrentTest == -1)
+                changeTest();
+        }
+        public void initiateTest4()
+        {
+            //TODO
+            //Test 4 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
+            //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+
+            if (remainingInCurrentTest == -1)
+                changeTest();
+        }
+        public void initiateTest5()
+        {
+            //TODO
+            //Test 5 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
+            //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+
+            if (remainingInCurrentTest == -1)
+                endTest();
         }
 
     }

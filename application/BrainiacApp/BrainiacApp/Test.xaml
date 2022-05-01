@@ -40,7 +40,7 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="0,20,0,5"
+                        Margin="0,40,0,10"
                         HorizontalAlignment="Center"
                         Text="Time Left"
                         FontSize="23"
@@ -49,7 +49,7 @@
                     <!-- Progress Bar Here -->
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         HorizontalAlignment="Center"
                         Text="Test No"
                         FontSize="23"
@@ -57,14 +57,14 @@
 
                     <TextBlock
                         Name="testNo"
-                        Margin="0,5,0,0"
+                        Margin="0,10,0,0"
                         HorizontalAlignment="Center"
                         Text="1"
                         FontSize="23"
                         Foreground="#17B978"/>
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         HorizontalAlignment="Center"
                         Text="QuestionNo"
                         FontSize="23"
@@ -72,14 +72,14 @@
 
                     <TextBlock
                         Name="questionNo"
-                        Margin="0,5,0,0"
+                        Margin="0,10,0,0"
                         HorizontalAlignment="Center"
                         Text="0"
                         FontSize="23"
                         Foreground="#17B978"/>
 
                     <TextBlock
-                        Margin="0,10,0,0"
+                        Margin="0,20,0,0"
                         HorizontalAlignment="Center"
                         Text="Remaining"
                         FontSize="23"
@@ -87,48 +87,11 @@
 
                     <TextBlock
                         Name="remaining"
-                        Margin="0,5,0,0"
+                        Margin="0,10,0,40"
                         HorizontalAlignment="Center"
                         Text="6"
                         FontSize="23"
                         Foreground="#17B978"/>
-
-                    <TextBlock
-                        Margin="0,10,0,5"
-                        HorizontalAlignment="Center"
-                        Text="Pause"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <Button
-                        Margin="0,5,0,0"
-                        Width="70"
-                        Height="70" 
-                        BorderThickness="0,0,0,0">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="35"/>
-                            </Style>
-                        </Button.Resources>
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#086972"/>
-                                <GradientStop Color="#17B978" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-
-                        <Image
-                            Height="35"
-                            Width="35">
-                            <Image.Source>
-                                <BitmapImage  
-                                     UriSource="/Icons/pause.png" />
-                            </Image.Source>
-                        </Image>
-
-                    </Button>
-
-
 
                 </StackPanel>
 
@@ -158,20 +121,12 @@ be given the needed instructions. If you want to see the instructions again,&#x0
 you can click Help Center."/>
 
                 <TextBlock
-                    Margin="0,13,0,0"
-                    Foreground="White"
-                    TextAlignment="Center"
-                    FontSize="23"
-                    HorizontalAlignment="Center"
-                    Text="It is important that you obey the test rules and act accordingly."/>
-
-                <TextBlock
                     Margin="0,13,0,17"
                     Foreground="White"
                     TextAlignment="Center"
                     FontSize="23"
                     HorizontalAlignment="Center"
-                    Text="You can pause the test at anytime however, it is dicouraged."/>
+                    Text="It is important that you obey the test rules and act accordingly."/>
 
                 <Rectangle
                     Height="2"

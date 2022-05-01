@@ -137,6 +137,22 @@ resting time. During that time keep your eyes closed
 and try not to think anything.</value>
   </data>
   <data name="T1Q1" xml:space="preserve">
-    <value>Question1 of Test1</value>
+    <value>Think of the object “bike”. Keep thinking about it
+for the whole duration of the question.</value>
+  </data>
+  <data name="T1Q2" xml:space="preserve">
+    <value>Visualize the object “car” in yor mind.</value>
+  </data>
+  <data name="T1Q3" xml:space="preserve">
+    <value>Visualize a bumblebee with a head of bull in your head.</value>
+  </data>
+  <data name="T1Q4" xml:space="preserve">
+    <value>Visualize an imaginary place you would love to be in.
+This place should not exist in real world.</value>
+  </data>
+  <data name="T1Q5" xml:space="preserve">
+    <value>Visualize an imaginary event in your mind. This
+event should not have happened in real life. It can
+be totally fiction or inspired from real life events.</value>
   </data>
 </root>

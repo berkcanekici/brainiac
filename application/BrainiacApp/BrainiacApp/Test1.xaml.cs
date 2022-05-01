@@ -22,9 +22,11 @@ namespace BrainiacApp
     /// </summary>
     public partial class Test1 : Page
     {
-        public Test1()
+        private Test mainTest;
+        public Test1(Test main)
         {
             InitializeComponent();
+            mainTest = main;
             this.FontFamily = new FontFamily("Alata");
             setLanguage("en-Us");
         }
@@ -37,10 +39,31 @@ namespace BrainiacApp
             T1Info3.Text = Properties.strings.T1Info3;
             QuestionText.Text = Properties.strings.T1Q1;
         }
-        public void StartTest1()
+        private void StartTest1(object sender, RoutedEventArgs e)
         {
             Introduction.Visibility = Visibility.Collapsed;
             QuestionText.Visibility = Visibility.Visible;
+            mainTest.initiateTest1();
+        }
+
+        public void changeQuestion(int questionNo)
+        {
+            if(questionNo==2)
+            {
+                QuestionText.Text = Properties.strings.T1Q2;
+            }
+            else if(questionNo==3)
+            {
+                QuestionText.Text = Properties.strings.T1Q3;
+            }
+            else if(questionNo==4)
+            {
+                QuestionText.Text = Properties.strings.T1Q4;
+            }
+            else if(questionNo==5)
+            {
+                QuestionText.Text = Properties.strings.T1Q5;
+            }
         }
     }
 }
