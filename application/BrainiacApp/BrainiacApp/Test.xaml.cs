@@ -23,7 +23,7 @@ namespace BrainiacApp
     /// </summary>
     public partial class Test : Page
     {
-        private String userName;
+        private String userName; //Bu username database'e veri atarken kullanılabilir kime ait göstermek için ama database'e veri atarken id de atamak lazım (uid ile)
         private Test1 test1;
         private Test2 test2;
         private Test3 test3;
@@ -131,6 +131,9 @@ namespace BrainiacApp
             //TODO
             //Test 1 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
             //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
+            //Soruların görünümünü değiştirmek için Test1'e örnek bir changeQuestion methodu yazdım.
+            //Ayrıca questionlar arası rest timelar olacak. 1'den 2'ye, 2'den 3'e geçerken vb. Bunun için changeToRestTime diye bir method var 
+            //Bu method sadece Rest Time yazısını çıkartıyor sürelerin ayarlamaları yine burdan yapılacak.
 
             if (remainingInCurrentTest == -1)
                 changeTest();

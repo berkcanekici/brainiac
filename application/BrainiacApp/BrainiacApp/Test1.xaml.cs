@@ -50,20 +50,30 @@ namespace BrainiacApp
         {
             if(questionNo==2)
             {
+                Rest.Visibility = Visibility.Collapsed;
                 QuestionText.Text = Properties.strings.T1Q2;
             }
             else if(questionNo==3)
             {
+                Rest.Visibility = Visibility.Collapsed;
                 QuestionText.Text = Properties.strings.T1Q3;
             }
             else if(questionNo==4)
             {
+                Rest.Visibility = Visibility.Collapsed;
                 QuestionText.Text = Properties.strings.T1Q4;
             }
             else if(questionNo==5)
             {
+                Rest.Visibility = Visibility.Collapsed;
                 QuestionText.Text = Properties.strings.T1Q5;
             }
+        }
+
+        public void changeToRestTime()
+        {
+            Rest.Visibility = Visibility.Visible;
+            QuestionText.Visibility = Visibility.Collapsed;
         }
     }
 }

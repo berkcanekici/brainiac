@@ -69,6 +69,15 @@
             VerticalAlignment="Center"
             FontSize="23"/>
 
+        <TextBlock
+            Visibility="Collapsed"
+            Name="Rest"
+            Text="Rest Time"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+
     </Grid>
     
 </Page>
