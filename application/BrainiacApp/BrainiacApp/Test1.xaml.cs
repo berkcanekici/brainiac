@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Globalization;
-
+using System.Windows.Threading;
 namespace BrainiacApp
 {
     /// <summary>
@@ -43,30 +43,40 @@ namespace BrainiacApp
         {
             Introduction.Visibility = Visibility.Collapsed;
             QuestionText.Visibility = Visibility.Visible;
-            mainTest.initiateTest1();
+           mainTest.initiateTest1();
         }
 
         public void changeQuestion(int questionNo)
         {
+            
             if(questionNo==2)
             {
                 Rest.Visibility = Visibility.Collapsed;
+                QuestionText.Visibility = Visibility.Visible;
                 QuestionText.Text = Properties.strings.T1Q2;
+                mainTest.initiateTest1();
             }
             else if(questionNo==3)
             {
                 Rest.Visibility = Visibility.Collapsed;
+                QuestionText.Visibility = Visibility.Visible;
                 QuestionText.Text = Properties.strings.T1Q3;
+                
+                mainTest.initiateTest1();
             }
             else if(questionNo==4)
             {
                 Rest.Visibility = Visibility.Collapsed;
+                QuestionText.Visibility = Visibility.Visible;
                 QuestionText.Text = Properties.strings.T1Q4;
+                mainTest.initiateTest1();
             }
             else if(questionNo==5)
             {
                 Rest.Visibility = Visibility.Collapsed;
+                QuestionText.Visibility = Visibility.Visible;
                 QuestionText.Text = Properties.strings.T1Q5;
+                mainTest.initiateTest1();
             }
         }
 

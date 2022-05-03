@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Globalization;
+using System.Windows.Threading;
 
 
 namespace BrainiacApp
@@ -32,7 +33,8 @@ namespace BrainiacApp
         private int currentTest = 0;
         private int currentQuestion = 0;
         private int remainingInCurrentTest;
-
+        DispatcherTimer GeriSayim;
+        DispatcherTimer restTimer;
         public Test()
         {
             InitializeComponent();
@@ -85,18 +87,23 @@ namespace BrainiacApp
                 LeftBar.Visibility = Visibility.Visible;
                 QuestionFrame.Visibility = Visibility.Visible;
                 changeTest();
+                timerProgress.Value = 100;
                 QuestionFrame.NavigationService.Navigate(test1);
+
             }
         }
 
         private void changeTest()
         {
+
             //TODO
+            
             currentTest++;
             if(currentTest==1)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
+                
             }
             else if(currentTest==2)
             {
@@ -119,24 +126,124 @@ namespace BrainiacApp
                 remainingInCurrentTest = 1;
             }
         }
+        private int increment = 0;
+        private int increment1 = 0;
+        private void dtTicker(object sender, EventArgs e)
+        {
+            increment++;
+            timerTextBlock.Text = increment.ToString();
+            timerProgress.Value = increment;
+            if (currentQuestion == 1)
+            {
+                timerProgress.Maximum = 10;
+                if (increment == 10)
+                {
+                    GeriSayim.Stop();
 
+                    restQuestion();
+
+                }
+            }
+            if (currentQuestion == 2)
+            {
+                timerProgress.Maximum = 10;
+                if (increment == 10)
+                {
+                    GeriSayim.Stop();
+                    restQuestion();
+
+                }
+            }
+            if (currentQuestion == 3)
+            {
+                timerProgress.Maximum = 15;
+                if (increment == 15)
+                {
+                    GeriSayim.Stop();
+                    restQuestion();
+                }
+            }
+            if (currentQuestion == 4)
+            {
+                timerProgress.Maximum = 20;
+                if (increment == 20)
+                {
+                    GeriSayim.Stop();
+                    restQuestion();
+                }
+            }
+            if (currentQuestion == 5)
+            {
+                timerProgress.Maximum = 30;
+                if (increment == 30)
+                {
+                    GeriSayim.Stop();
+                    
+                }
+            }
+        }
         private void endTest()
         {
+          
             //TODO
             //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
         }
-
+        private void restTicker(object sender, EventArgs e)
+        {
+           
+            increment1++;
+            timerTextBlock.Text = increment1.ToString();
+            test1.changeToRestTime();
+            timerProgress.Value = increment1;
+            timerProgress.Minimum =0;
+            timerProgress.Maximum = 5;
+            if (increment1==5)
+            {
+                restTimer.Stop();
+                increment1 = 0;
+                
+                test1.changeQuestion(currentQuestion + 1);
+            }
+        }
+        private void restQuestion()
+        {
+            increment1= 0;
+            restTimer = new DispatcherTimer();
+            restTimer.Interval = TimeSpan.FromSeconds(1);
+            restTimer.Tick += restTicker;
+            restTimer.Start();
+        }
         public void initiateTest1()
         {
+            currentQuestion++;
+            remainingInCurrentTest--;
+            questionNo.Text = currentQuestion.ToString();
+            remaining.Text = remainingInCurrentTest.ToString();
+            
+            increment = 0;
+            
             //TODO
             //Test 1 sürelerinin ve süreye göre geçişlerin ayarlanması burda olacak.
             //Sorular değiştikçe currentQuestion, remainingInCurrentTest değişmeli
             //Soruların görünümünü değiştirmek için Test1'e örnek bir changeQuestion methodu yazdım.
             //Ayrıca questionlar arası rest timelar olacak. 1'den 2'ye, 2'den 3'e geçerken vb. Bunun için changeToRestTime diye bir method var 
             //Bu method sadece Rest Time yazısını çıkartıyor sürelerin ayarlamaları yine burdan yapılacak.
+            timerProgress.Value = 0;
+            timerProgress.Minimum = 0;
+            timerProgress.Maximum = 10;
+            GeriSayim = new DispatcherTimer();
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Tick += dtTicker;
+            GeriSayim.Start();
+            
+            if (remainingInCurrentTest == 0)
+            {
+                
 
-            if (remainingInCurrentTest == -1)
-                changeTest();
+            }
+
+                
+            
         }
 
         public void initiateTest2()
