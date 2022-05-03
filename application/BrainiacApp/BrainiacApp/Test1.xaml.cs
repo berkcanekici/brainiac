@@ -43,7 +43,7 @@ namespace BrainiacApp
         {
             Introduction.Visibility = Visibility.Collapsed;
             QuestionText.Visibility = Visibility.Visible;
-           mainTest.initiateTest1();
+            mainTest.initiateTest1();
         }
 
         public void changeQuestion(int questionNo)

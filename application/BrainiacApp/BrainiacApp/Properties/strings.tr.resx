@@ -153,4 +153,20 @@ Bu yer gerçek hayatta bulunmamalı.</value>
 Bu olay tamamen kurgu veya gerçek hayattan
 esinlenmiş olabilir.</value>
   </data>
+  <data name="T2Info1" xml:space="preserve">
+    <value>Size teker teker 3 resim gösterilecek. Her resim için
+20 saniyeniz olacak. 20 saniye boyunca o resmin
+Size neler çağırıştırdığını düşünmelisiniz.</value>
+  </data>
+  <data name="T2Info2" xml:space="preserve">
+    <value>Çağrışımlar gerçek hayata dair veya hayali olabilir.
+Bağlantılar bulmak için iyice düşünün.</value>
+  </data>
+  <data name="T2Info3" xml:space="preserve">
+    <value>Resimler arasında 10’ar saniye dinlenme süreniz olacak.
+Aklınızı boşaltın.</value>
+  </data>
+  <data name="T2Q" xml:space="preserve">
+    <value>Bu resim size ne veya neleri çağırıştırıyor?</value>
+  </data>
 </root>

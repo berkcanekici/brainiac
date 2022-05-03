@@ -13,6 +13,7 @@
     <Grid>
 
         <TextBlock
+            Name="TestName"
             Margin="0,60,0,20"
             HorizontalAlignment="Center"
             Text="Test"

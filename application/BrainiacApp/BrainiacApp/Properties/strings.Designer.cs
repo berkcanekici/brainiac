@@ -150,5 +150,47 @@ namespace BrainiacApp.Properties {
                 return ResourceManager.GetString("T1Q5", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   You will be shown 3 pictures one by one. For each
+        ///picture you will be given 20 seconds. During those 
+        ///whole 20 seconds, you should think about what the
+        ///picture reminds you of. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T2Info1 {
+            get {
+                return ResourceManager.GetString("T2Info1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The pictures might remind you of things related to 
+        ///real life or fiction. Try hard to make connections. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T2Info2 {
+            get {
+                return ResourceManager.GetString("T2Info2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Between pictures you will have 10 seconds rest. 
+        ///Free your mind. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T2Info3 {
+            get {
+                return ResourceManager.GetString("T2Info3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What does this picture resemble to you?
+        ///(Can be multiple things) benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string T2Q {
+            get {
+                return ResourceManager.GetString("T2Q", resourceCulture);
+            }
+        }
     }
 }

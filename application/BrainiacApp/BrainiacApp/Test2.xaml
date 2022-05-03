@@ -10,6 +10,92 @@
       Title="Test2">
 
     <Grid>
-        
+
+        <StackPanel
+            Name="Introduction"
+            Visibility="Visible"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Name="T2Info1"
+                Margin="30,0,30,0"
+                TextAlignment="Center"
+                Text="T2Info1"
+                Foreground="White"
+                FontSize="26"/>
+
+            <TextBlock
+                Name="T2Info2"
+                Margin="30,20,30,0"
+                TextAlignment="Center"
+                Text="T2Info2"
+                Foreground="White"
+                FontSize="26"/>
+
+            <TextBlock
+                Name="T2Info3"
+                Margin="30,20,30,20"
+                TextAlignment="Center"
+                Text="T2Info3"
+                Foreground="White"
+                FontSize="26"/>
+
+            <Button
+                Width="200"
+                Height="47" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="StartTest2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Start"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel
+            Name="QuestionPanel"
+            Visibility="Collapsed">
+
+            <Image
+                Name="QuestionImage"
+                Margin="30,50,30,30"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Height="300"
+                Width="500"
+                Stretch="Fill">
+                <Image.Source>
+                    <BitmapImage  
+                         UriSource="/Images/rorsch.jpg" />
+                </Image.Source>
+            </Image>
+
+            <TextBlock
+                Name="QuestionText"
+                Text="Question"
+                Foreground="White"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="23"/>
+
+        </StackPanel>
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="Rest"
+            Text="Rest Time"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+
     </Grid>
 </Page>

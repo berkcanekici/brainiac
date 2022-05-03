@@ -100,30 +100,35 @@ namespace BrainiacApp
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
                 QuestionFrame.NavigationService.Navigate(test1);
+                TestName.Text = "Mental Imagery Test";
             }
             else if(currentTest==2)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 3;
                 QuestionFrame.NavigationService.Navigate(test2);
+                TestName.Text = "Rorschach Test";
             }
             else if(currentTest==3)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 6;
                 QuestionFrame.NavigationService.Navigate(test3);
+                TestName.Text = "Dual N-Back Test";
             }
             else if(currentTest==4)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
                 QuestionFrame.NavigationService.Navigate(test4);
+                TestName.Text = "Verb Generation Test";
             }
             else if(currentTest==5)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 1;
                 QuestionFrame.NavigationService.Navigate(test5);
+                TestName.Text = "Go-No/Go Test";
             }
         }
         private int increment = 0;

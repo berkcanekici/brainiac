@@ -154,4 +154,22 @@ This place should not exist in real world.</value>
 event should not have happened in real life. It can
 be totally fiction or inspired from real life events.</value>
   </data>
+  <data name="T2Info1" xml:space="preserve">
+    <value>You will be shown 3 pictures one by one. For each
+picture you will be given 20 seconds. During those 
+whole 20 seconds, you should think about what the
+picture reminds you of.</value>
+  </data>
+  <data name="T2Info2" xml:space="preserve">
+    <value>The pictures might remind you of things related to 
+real life or fiction. Try hard to make connections.</value>
+  </data>
+  <data name="T2Info3" xml:space="preserve">
+    <value>Between pictures you will have 10 seconds rest. 
+Free your mind.</value>
+  </data>
+  <data name="T2Q" xml:space="preserve">
+    <value>What does this picture resemble to you?
+(Can be multiple things)</value>
+  </data>
 </root>
