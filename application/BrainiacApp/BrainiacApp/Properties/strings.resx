@@ -137,8 +137,7 @@ resting time. During that time keep your eyes closed
 and try not to think anything.</value>
   </data>
   <data name="T1Q1" xml:space="preserve">
-    <value>Think of the object “bike”. Keep thinking about it
-for the whole duration of the question.</value>
+    <value>Think of the object “bike”. </value>
   </data>
   <data name="T1Q2" xml:space="preserve">
     <value>Visualize the object “car” in yor mind.</value>

@@ -41,13 +41,13 @@
                 <StackPanel>
 
                     <TextBlock
-                        Margin="0,40,0,10"
+                        Margin="0,50,0,10"
                         HorizontalAlignment="Center"
                         Text="Time Left"
                         FontSize="23"
                         Foreground="White"/>
-                    
-                    <xrpb:RadialProgressBar x:Name="timerProgress" Height="103" Width="128" Foreground="#FF0080FF"/>
+
+                    <xrpb:RadialProgressBar x:Name="timerProgress" Height="103" Width="103" Foreground="#FF086972"/>
                     <TextBlock x:Name="timerTextBlock"
                         Margin="0,-65,0,0"
                         HorizontalAlignment="Center"
@@ -55,7 +55,7 @@
                         Foreground="White"/>
 
                     <TextBlock
-                        Margin="0,40,0,0"
+                        Margin="0,30,0,0"
                         HorizontalAlignment="Center"
                         Text="Test No"
                         FontSize="23"
@@ -101,8 +101,6 @@
                     <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
 
                 </StackPanel>
-
-
 
             </Grid>
 

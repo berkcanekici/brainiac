@@ -88,42 +88,42 @@ namespace BrainiacApp
                 QuestionFrame.Visibility = Visibility.Visible;
                 changeTest();
                 timerProgress.Value = 100;
-                QuestionFrame.NavigationService.Navigate(test1);
 
             }
         }
 
         private void changeTest()
         {
-
-            //TODO
-            
             currentTest++;
             if(currentTest==1)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
-                
+                QuestionFrame.NavigationService.Navigate(test1);
             }
             else if(currentTest==2)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 3;
+                QuestionFrame.NavigationService.Navigate(test2);
             }
             else if(currentTest==3)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 6;
+                QuestionFrame.NavigationService.Navigate(test3);
             }
             else if(currentTest==4)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
+                QuestionFrame.NavigationService.Navigate(test4);
             }
             else if(currentTest==5)
             {
                 currentQuestion = 0;
                 remainingInCurrentTest = 1;
+                QuestionFrame.NavigationService.Navigate(test5);
             }
         }
         private int increment = 0;
@@ -135,8 +135,8 @@ namespace BrainiacApp
             timerProgress.Value = increment;
             if (currentQuestion == 1)
             {
-                timerProgress.Maximum = 10;
-                if (increment == 10)
+                timerProgress.Maximum = 12;
+                if (increment == 12)
                 {
                     GeriSayim.Stop();
 
@@ -146,8 +146,8 @@ namespace BrainiacApp
             }
             if (currentQuestion == 2)
             {
-                timerProgress.Maximum = 10;
-                if (increment == 10)
+                timerProgress.Maximum = 12;
+                if (increment == 12)
                 {
                     GeriSayim.Stop();
                     restQuestion();
@@ -174,11 +174,11 @@ namespace BrainiacApp
             }
             if (currentQuestion == 5)
             {
-                timerProgress.Maximum = 30;
-                if (increment == 30)
+                timerProgress.Maximum = 26;
+                if (increment == 26)
                 {
                     GeriSayim.Stop();
-                    
+                    changeTest();
                 }
             }
         }
@@ -230,7 +230,7 @@ namespace BrainiacApp
             //Bu method sadece Rest Time yazısını çıkartıyor sürelerin ayarlamaları yine burdan yapılacak.
             timerProgress.Value = 0;
             timerProgress.Minimum = 0;
-            timerProgress.Maximum = 10;
+            timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
             GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;

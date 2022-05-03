@@ -104,8 +104,7 @@ namespace BrainiacApp.Properties {
         }
         
         /// <summary>
-        ///   Think of the object “bike”. Keep thinking about it
-        ///for the whole duration of the question. benzeri yerelleştirilmiş bir dize arar.
+        ///   Think of the object “bike”.  benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string T1Q1 {
             get {
