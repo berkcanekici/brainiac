@@ -23,6 +23,7 @@ namespace BrainiacApp
     public partial class Test2 : Page
     {
         private Test mainTest;
+
         public Test2(Test main)
         {
             InitializeComponent();
@@ -52,7 +53,26 @@ namespace BrainiacApp
 
         public void changeQuestion(int questionNo)
         {
-            //TODO
+            if (questionNo == 2) {
+                
+                Rest.Visibility = Visibility.Collapsed;
+                QuestionPanel.Visibility = Visibility.Visible;
+                QuestionImage1.Visibility = Visibility.Collapsed;
+                QuestionImage2.Visibility = Visibility.Visible;
+                mainTest.initiateTest2();
+            }
+            else if (questionNo == 3) {
+
+                Rest.Visibility = Visibility.Collapsed;
+                QuestionPanel.Visibility = Visibility.Visible;
+                QuestionImage2.Visibility = Visibility.Collapsed;
+                QuestionImage3.Visibility = Visibility.Visible;
+                mainTest.initiateTest2();
+            }
+        }
+
+        private void InputBox_TextChanged(object sender, TextChangedEventArgs e) {
+
         }
     }
 }

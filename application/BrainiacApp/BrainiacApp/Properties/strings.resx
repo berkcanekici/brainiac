@@ -172,4 +172,49 @@ Free your mind.</value>
     <value>What does this picture resemble to you?
 (Can be multiple things)</value>
   </data>
+  <data name="T3Info1" xml:space="preserve">
+    <value>There will be a 3x3 board consisting of squares. Each question will consist of 3 parts. </value>
+  </data>
+  <data name="T3Info2" xml:space="preserve">
+    <value>In the first part, a square will light up and a letter will be shown on it.</value>
+  </data>
+  <data name="T3Info3" xml:space="preserve">
+    <value>You have to remember the square and the letter. In the third part you will have choices to select. </value>
+  </data>
+  <data name="T3Info4" xml:space="preserve">
+    <value>If the square and the letter matches the ones from the first part, then you select both match.</value>
+  </data>
+  <data name="T3Info5" xml:space="preserve">
+    <value>If they do not match, you select no match. If only one of them matches you select the corresponding match.</value>
+  </data>
+  <data name="T4Info" xml:space="preserve">
+    <value>Think of a verb related to given noun.</value>
+  </data>
+  <data name="T4Q1" xml:space="preserve">
+    <value>Pencil</value>
+  </data>
+  <data name="T4Q2" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="T4Q3" xml:space="preserve">
+    <value>Game</value>
+  </data>
+  <data name="T4Q4" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="T4Q5" xml:space="preserve">
+    <value>School</value>
+  </data>
+  <data name="T5Info1" xml:space="preserve">
+    <value>You will be given some commands randomly. This commands will say either</value>
+  </data>
+  <data name="T5Info2" xml:space="preserve">
+    <value>“Go” or “Don’t Go”. If you see “Go” you should click the button which says “Go”.</value>
+  </data>
+  <data name="T5Info3" xml:space="preserve">
+    <value>If you see “Don’t Go”, you should wait till the next command arrives.</value>
+  </data>
+  <data name="T5Q1" xml:space="preserve">
+    <value />
+  </data>
 </root>

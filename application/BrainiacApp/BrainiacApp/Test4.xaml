@@ -10,6 +10,59 @@
       Title="Test4">
 
     <Grid>
-        
+
+        <StackPanel
+            Name="Introduction"
+            Visibility="Visible"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Name="T4Info"
+                Margin="30,20,30,0"
+                TextAlignment="Center"
+                Text="Q1Info2"
+                Foreground="White"
+                FontSize="26" Height="69"/>
+
+            <Button
+                Width="200"
+                Height="47" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="StartTest4">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Start"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
+        </StackPanel>
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="QuestionText"
+            Text="Question"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="Rest"
+            Text="Rest Time"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+        <TextBox Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="21" Margin="0,100,0,0" TextWrapping="Wrap" Name="InputBox"  Text="" Width="188"/>
+
     </Grid>
+
 </Page>

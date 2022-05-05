@@ -5,11 +5,167 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BrainiacApp"
       mc:Ignorable="d" 
-      Title="Test3"
       d:DesignHeight="835" d:DesignWidth="1180"
-      Background="Transparent">
+      Background="Transparent"
+      Title="Test3">
 
     <Grid>
-        
+
+        <StackPanel
+            Name="Introduction"
+            Visibility="Visible"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Name="T3Info1"
+                Margin="30,0,30,0"
+                TextAlignment="Center"
+                Text="T2Info1"
+                Foreground="White"
+                FontSize="13"/>
+
+            <TextBlock
+                Name="T3Info2"
+                Margin="30,20,30,0"
+                TextAlignment="Center"
+                Text="T2Info2"
+                Foreground="White"
+                FontSize="13"/>
+
+            <TextBlock
+                Name="T3Info3"
+                Margin="30,20,30,20"
+                TextAlignment="Center"
+                Text="T2Info3"
+                Foreground="White"
+                FontSize="13"/>
+
+            <TextBlock
+                Name="T3Info4"
+                Margin="30,0,30,20"
+                TextAlignment="Center"
+                Text="T2Info4"
+                Foreground="White"
+                FontSize="13" Height="18"/>
+
+            <TextBlock
+                Name="T3Info5"
+                Margin="30,0,30,20"
+                TextAlignment="Center"
+                Text="T2Info5"
+                Foreground="White"
+                FontSize="13" Height="22"/>
+
+            <Button
+                Width="200"
+                Height="47" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="StartTest3" Margin="0,0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Start"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
+        </StackPanel>
+
+
+        <Canvas
+            Name="QuestionPanel"
+            Visibility="Collapsed" Margin="10,0,-10,0">
+            <Label Visibility="Visible" x:Name="A1" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0"  Content="" Width="100" Canvas.Left="280" FontSize="25" Canvas.Top="89"/>
+            <Label Visibility="Visible" x:Name="A2" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="386" FontSize="25" Canvas.Top="89"/>
+            <Label Visibility="Visible" x:Name="A3" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="490" FontSize="25" Canvas.Top="89"/>
+            <Label Visibility="Visible" x:Name="B1" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="280" FontSize="25" Canvas.Top="193"/>
+            <Label Visibility="Visible" x:Name="B2" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="386" FontSize="25" Canvas.Top="193"/>
+            <Label Visibility="Visible" x:Name="B3" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="490" FontSize="25" Canvas.Top="193"/>
+            <Label Visibility="Visible" x:Name="C1" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="280" FontSize="25" Canvas.Top="299"/>
+            <Label Visibility="Visible" x:Name="C2" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="386" FontSize="25" Canvas.Top="299"/>
+            <Label Visibility="Visible" x:Name="C3" Background="Turquoise" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Height="100" Margin="0,0" Content="" Width="100" Canvas.Left="490" FontSize="25" Canvas.Top="299"/>
+
+        </Canvas>
+
+        <Canvas
+            Name="ButtonPanel"
+            Visibility="Collapsed" Margin="10,0,-10,0">
+            <Button 
+                 Width="140"
+                Height="30" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="BothMatch" Canvas.Left="94" Canvas.Top="147">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Both Match"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+            <Button 
+            Width="140"
+                Height="30" 
+            BorderThickness="0,0,0,0" 
+            Background="#086972"
+            Click="NoMatch" Canvas.Left="94" Canvas.Top="197">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                Text="No Match"
+                FontSize="16"
+                Foreground="White"/>
+            </Button>
+            <Button 
+            Width="140"
+                Height="30" 
+            BorderThickness="0,0,0,0" 
+            Background="#086972"
+            Click="LetterMatch" Canvas.Left="94" Canvas.Top="247">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                Text="Letter Match"
+                FontSize="16"
+                Foreground="White"/>
+            </Button>
+            <Button 
+            Width="140"
+                Height="30" 
+            BorderThickness="0,0,0,0" 
+            Background="#086972"
+            Click="SquareMatch" Canvas.Left="94" Canvas.Top="299">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                Text="Square Match"
+                FontSize="16"
+                Foreground="White"/>
+            </Button>
+        </Canvas>
+
+
+
     </Grid>
 </Page>

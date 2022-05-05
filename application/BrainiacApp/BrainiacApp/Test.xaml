@@ -12,7 +12,46 @@
 
     <Grid>
 
-        <TextBlock
+        <Canvas
+            Name="ButtonPanel"
+            Visibility="Collapsed">
+            <Image
+                        Visibility="Visible"
+                        Name="ReturnBackImage"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Height="825"
+                        Width="1170"
+                        Stretch="Fill">
+                <Image.Source>
+                    <BitmapImage  
+                                 UriSource="/Images/resultEkranYalan.png" />
+                </Image.Source>
+            </Image>
+
+            <Button 
+                 Width="233"
+                Height="53" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="ReturnBack" Canvas.Left="869" Canvas.Top="708">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Return Back"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+        </Canvas>
+
+        <Grid
+            Name="FirstGrid"
+            Visibility="Visible">
+            <TextBlock
             Name="TestName"
             Margin="0,60,0,20"
             HorizontalAlignment="Center"
@@ -20,250 +59,252 @@
             FontSize="39"
             Foreground="White"/>
 
-        <Grid
-            Height="530">
-
             <Grid
-                Background="Black"
-                Opacity="0.35"/>
-
-            <Grid
-                Width="204"
-                HorizontalAlignment="Left"
-                x:Name="LeftBar"
-                Visibility="Collapsed">
+                Height="530">
 
                 <Grid
-                    HorizontalAlignment="Left"
-                    Width="204"
                     Background="Black"
-                    Opacity="0.25"/>
-
-                <StackPanel>
-
-                    <TextBlock
-                        Margin="0,50,0,10"
-                        HorizontalAlignment="Center"
-                        Text="Time Left"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <xrpb:RadialProgressBar x:Name="timerProgress" Height="103" Width="103" Foreground="#FF086972"/>
-                    <TextBlock x:Name="timerTextBlock"
-                        Margin="0,-65,0,0"
-                        HorizontalAlignment="Center"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <TextBlock
-                        Margin="0,30,0,0"
-                        HorizontalAlignment="Center"
-                        Text="Test No"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <TextBlock
-                        x:Name="testNo"
-                        Margin="0,10,0,0"
-                        HorizontalAlignment="Center"
-                        Text="1"
-                        FontSize="23"
-                        Foreground="#17B978"/>
-
-                    <TextBlock
-                        Margin="0,20,0,0"
-                        HorizontalAlignment="Center"
-                        Text="QuestionNo"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <TextBlock
-                        x:Name="questionNo"
-                        Margin="0,10,0,0"
-                        HorizontalAlignment="Center"
-                        Text="0"
-                        FontSize="23"
-                        Foreground="#17B978"/>
-
-                    <TextBlock
-                        Margin="0,20,0,0"
-                        HorizontalAlignment="Center"
-                        Text="Remaining"
-                        FontSize="23"
-                        Foreground="White"/>
-
-                    <TextBlock
-                        x:Name="remaining"
-                        Margin="0,10,0,40"
-                        HorizontalAlignment="Center"
-                        Text="6"
-                        FontSize="23"
-                        Foreground="#17B978"/>
-                    <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-
-                </StackPanel>
-
-            </Grid>
-
-            <StackPanel
-                x:Name="FirstPage"
-                Visibility="Visible">
-
-                <TextBlock
-                    Margin="0,27,0,0"
-                    Foreground="White"
-                    TextAlignment="Center"
-                    FontSize="23"
-                    HorizontalAlignment="Center"
-                    Text="To start the test you need to enter your name and choose the language&#xA;     you want the test to be in. "/>
-
-                <TextBlock
-                    Margin="0,13,0,0"
-                    Foreground="White"
-                    TextAlignment="Center"
-                    FontSize="23"
-                    HorizontalAlignment="Center"
-                    Text="The test will have 5 different parts. Before each part, you will&#xA; be given the needed instructions. If you want to see the instructions again,&#xA; you can click Help Center."/>
-
-                <TextBlock
-                    Margin="0,13,0,17"
-                    Foreground="White"
-                    TextAlignment="Center"
-                    FontSize="23"
-                    HorizontalAlignment="Center"
-                    Text="It is important that you obey the test rules and act accordingly."/>
-
-                <Rectangle
-                    Height="2"
-                    Width="471"
-                    Fill="#17B978"/>
+                    Opacity="0.35"/>
 
                 <Grid
-                    Height="163"
-                    Width="471">
+                    Width="204"
+                    HorizontalAlignment="Left"
+                    x:Name="LeftBar"
+                    Visibility="Collapsed">
 
                     <Grid
-                        Background="#086972"
-                        Opacity="0.4"/>
+                        HorizontalAlignment="Left"
+                        Width="204"
+                        Background="Black"
+                        Opacity="0.25"/>
 
                     <StackPanel>
 
                         <TextBlock
-                            Margin="0,15,0,7"
+                            Margin="0,50,0,10"
                             HorizontalAlignment="Center"
-                            Text="Choose Language"
-                            Foreground="White"
-                            FontSize="19"/>
+                            Text="Time Left"
+                            FontSize="23"
+                            Foreground="White"/>
 
-                        <StackPanel
-                            Orientation="Horizontal"
-                            HorizontalAlignment="Center">
+                        <xrpb:RadialProgressBar x:Name="timerProgress" Height="103" Width="103" Foreground="#FF086972"/>
+                        <TextBlock x:Name="timerTextBlock"
+                            Margin="0,-65,0,0"
+                            HorizontalAlignment="Center"
+                            FontSize="23"
+                            Foreground="White"/>
 
-                            <StackPanel.Resources>
-                                <Style x:Key="Flag" TargetType="{x:Type RadioButton}">
+                        <TextBlock
+                            Margin="0,30,0,0"
+                            HorizontalAlignment="Center"
+                            Text="Test No"
+                            FontSize="23"
+                            Foreground="White"/>
 
-                                    <Setter Property="BorderThickness" Value="2"/>
+                        <TextBlock
+                            x:Name="testNo"
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            Text="1"
+                            FontSize="23"
+                            Foreground="#17B978"/>
 
-                                    <Setter Property="Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="{x:Type RadioButton}">
-                                                <Border BorderThickness="{TemplateBinding BorderThickness}"
-                                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                                    Background="Transparent"
-                                                    CornerRadius="20">
-                                                    <Image Source="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"/>
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsChecked" Value="False">
-                                            <Setter Property="Opacity" Value="0.5"/>
-                                        </Trigger>
-                                    </Style.Triggers>
+                        <TextBlock
+                            Margin="0,20,0,0"
+                            HorizontalAlignment="Center"
+                            Text="QuestionNo"
+                            FontSize="23"
+                            Foreground="White"/>
 
-                                </Style>
-                            </StackPanel.Resources>
+                        <TextBlock
+                            x:Name="questionNo"
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            Text="0"
+                            FontSize="23"
+                            Foreground="#17B978"/>
 
-                            <RadioButton
-                                Margin="0,0,10,7"
-                                x:Name="English"
-                                Content="/Images/english.png"
-                                Height="60"
-                                Width="60"
-                                IsChecked="True"
-                                Checked="EnglishSelected"
-                                BorderBrush="Transparent"
-                                Style="{StaticResource Flag}"
-                                />
+                        <TextBlock
+                            Margin="0,20,0,0"
+                            HorizontalAlignment="Center"
+                            Text="Remaining"
+                            FontSize="23"
+                            Foreground="White"/>
 
-                            <RadioButton
-                                Margin="10,0,0,7"
-                                x:Name="Turkish"
-                                Content="/Images/turkish.png"
-                                Height="60"
-                                BorderBrush="Transparent"
-                                Checked="TurkishSelected"
-                                Style="{StaticResource Flag}"
-                                Width="60"/>
-
-                        </StackPanel>
-
-                        <TextBox
-                            x:Name="NameEnterBox"
-                            Width="200"
-                            Height="33"
-                            Background="#17B978"
-                            TextAlignment="Center"
-                            BorderThickness="0,0,0,0"
-                            VerticalContentAlignment="Center"
-                            Text="Enter Your Name Here"
-                            FontSize="16" Opacity="0.6"
-                            GotFocus="NameTextboxClicked">
-
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="17"/>
-                                </Style>
-                            </TextBox.Resources>
-
-                        </TextBox>
+                        <TextBlock
+                            x:Name="remaining"
+                            Margin="0,10,0,40"
+                            HorizontalAlignment="Center"
+                            Text="6"
+                            FontSize="23"
+                            Foreground="#17B978"/>
+                        <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
 
                     </StackPanel>
 
                 </Grid>
 
-                <Rectangle
-                    Margin="0,0,0,17"
-                    Height="2"
-                    Width="471"
-                    Fill="#17B978"/>
-
-                <Button
-                    Width="200"
-                    Height="45" 
-                    BorderThickness="0,0,0,0" 
-                    Background="#086972"
-                    Click="OnStart">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="23"/>
-                        </Style>
-                    </Button.Resources>
+                <StackPanel
+                    x:Name="FirstPage"
+                    Visibility="Visible">
 
                     <TextBlock
-                        Text="Start"
-                        FontSize="16"
-                        Foreground="White"/>
-                </Button>
+                        Margin="0,27,0,0"
+                        Foreground="White"
+                        TextAlignment="Center"
+                        FontSize="23"
+                        HorizontalAlignment="Center"
+                        Text="To start the test you need to enter your name and choose the language&#xA;     you want the test to be in. "/>
 
-            </StackPanel>
+                    <TextBlock
+                        Margin="0,13,0,0"
+                        Foreground="White"
+                        TextAlignment="Center"
+                        FontSize="23"
+                        HorizontalAlignment="Center"
+                        Text="The test will have 5 different parts. Before each part, you will&#xA; be given the needed instructions. If you want to see the instructions again,&#xA; you can click Help Center."/>
 
-            <Frame 
-                Visibility="Collapsed"
-                Margin="204,0,0,0"
-                NavigationUIVisibility="Hidden"
-                x:Name="QuestionFrame"/>
+                    <TextBlock
+                        Margin="0,13,0,17"
+                        Foreground="White"
+                        TextAlignment="Center"
+                        FontSize="23"
+                        HorizontalAlignment="Center"
+                        Text="It is important that you obey the test rules and act accordingly."/>
+
+                    <Rectangle
+                        Height="2"
+                        Width="471"
+                        Fill="#17B978"/>
+
+                    <Grid
+                        Height="163"
+                        Width="471">
+
+                        <Grid
+                            Background="#086972"
+                            Opacity="0.4"/>
+
+                        <StackPanel>
+
+                            <TextBlock
+                                Margin="0,15,0,7"
+                                HorizontalAlignment="Center"
+                                Text="Choose Language"
+                                Foreground="White"
+                                FontSize="19"/>
+
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+
+                                <StackPanel.Resources>
+                                    <Style x:Key="Flag" TargetType="{x:Type RadioButton}">
+
+                                        <Setter Property="BorderThickness" Value="2"/>
+
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type RadioButton}">
+                                                    <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        Background="Transparent"
+                                                        CornerRadius="20">
+                                                        <Image Source="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsChecked" Value="False">
+                                                <Setter Property="Opacity" Value="0.5"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <RadioButton
+                                    Margin="0,0,10,7"
+                                    x:Name="English"
+                                    Content="/Images/english.png"
+                                    Height="60"
+                                    Width="60"
+                                    IsChecked="True"
+                                    Checked="EnglishSelected"
+                                    BorderBrush="Transparent"
+                                    Style="{StaticResource Flag}"
+                                    />
+
+                                <RadioButton
+                                    Margin="10,0,0,7"
+                                    x:Name="Turkish"
+                                    Content="/Images/turkish.png"
+                                    Height="60"
+                                    BorderBrush="Transparent"
+                                    Checked="TurkishSelected"
+                                    Style="{StaticResource Flag}"
+                                    Width="60"/>
+
+                            </StackPanel>
+
+                            <TextBox
+                                x:Name="NameEnterBox"
+                                Width="200"
+                                Height="33"
+                                Background="#17B978"
+                                TextAlignment="Center"
+                                BorderThickness="0,0,0,0"
+                                VerticalContentAlignment="Center"
+                                Text="Enter Your Name Here"
+                                FontSize="16" Opacity="0.6"
+                                GotFocus="NameTextboxClicked">
+
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="17"/>
+                                    </Style>
+                                </TextBox.Resources>
+
+                            </TextBox>
+
+                        </StackPanel>
+
+                    </Grid>
+
+                    <Rectangle
+                        Margin="0,0,0,17"
+                        Height="2"
+                        Width="471"
+                        Fill="#17B978"/>
+
+                    <Button
+                        Width="200"
+                        Height="45" 
+                        BorderThickness="0,0,0,0" 
+                        Background="#086972"
+                        Click="OnStart">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="23"/>
+                            </Style>
+                        </Button.Resources>
+
+                        <TextBlock
+                            Text="Start"
+                            FontSize="16"
+                            Foreground="White"/>
+                    </Button>
+
+                </StackPanel>
+
+                <Frame 
+                    Visibility="Collapsed"
+                    Margin="204,0,0,0"
+                    NavigationUIVisibility="Hidden"
+                    x:Name="QuestionFrame"/>
+
+            </Grid>
 
         </Grid>
 

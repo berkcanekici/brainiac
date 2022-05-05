@@ -65,7 +65,7 @@
             Visibility="Collapsed">
 
             <Image
-                Name="QuestionImage"
+                Name="QuestionImage1"
                 Margin="30,50,30,30"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch"
@@ -78,6 +78,36 @@
                 </Image.Source>
             </Image>
 
+            <Image
+                Visibility="Collapsed"
+                Name="QuestionImage2"
+                Margin="30,50,30,30"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Height="300"
+                Width="500"
+                Stretch="Fill">
+                <Image.Source>
+                    <BitmapImage  
+                         UriSource="/Images/rorsch2.jpg" />
+                </Image.Source>
+            </Image>
+
+            <Image
+                Visibility="Collapsed"
+                Name="QuestionImage3"
+                Margin="30,50,30,30"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Height="300"
+                Width="500"
+                Stretch="Fill">
+                <Image.Source>
+                    <BitmapImage  
+                         UriSource="/Images/rorsch3.jpg" />
+                </Image.Source>
+            </Image>
+
             <TextBlock
                 Name="QuestionText"
                 Text="Question"
@@ -85,6 +115,10 @@
                 TextAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="23"/>
+
+            
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Margin="265,0,0,0" TextWrapping="Wrap" Text="" Name="InputBox" Width="232"/>
+
 
         </StackPanel>
 
@@ -96,6 +130,7 @@
             TextAlignment="Center"
             VerticalAlignment="Center"
             FontSize="23"/>
+
 
     </Grid>
 </Page>

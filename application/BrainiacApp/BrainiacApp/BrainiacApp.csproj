@@ -265,5 +265,12 @@
   <ItemGroup>
     <Resource Include="Icons\pause.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rorsch2.jpg" />
+    <Resource Include="Images\rorsch3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\resultEkranYalan.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,131 @@
       Title="Test5">
 
     <Grid>
+
+        <StackPanel
+            Name="Introduction"
+            Visibility="Visible"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Name="T5Info1"
+                Margin="30,0,30,0"
+                TextAlignment="Center"
+                Text="Q1Info1"
+                Foreground="White"
+                FontSize="20"/>
+
+            <TextBlock
+                Name="T5Info2"
+                Margin="30,20,30,0"
+                TextAlignment="Center"
+                Text="Q1Info2"
+                Foreground="White"
+                FontSize="20"/>
+            
+
+            <TextBlock
+                Name="T5Info3"
+                Margin="30,20,30,20"
+                TextAlignment="Center"
+                Text="Q1Info3"
+                Foreground="White"
+                FontSize="20"/>
+
+            <Button
+                Width="200"
+                Height="47" 
+                BorderThickness="0,0,0,0" 
+                Background="#086972"
+                Click="StartTest5">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Start"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel
+            Name="QuestionPanel"
+            Visibility="Visible"
+            VerticalAlignment="Center">
+
+            <Button
+                Visibility="Collapsed"
+                x:Name="GoButton_"
+                Width="200"
+                Height="120" 
+                BorderThickness="0,0,0,0" 
+                Background="Green"
+                Click="GoButton" Margin="0,0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="Go"
+                    FontSize="16"
+                    Foreground="White"/>
+            </Button>
+
+            <Button
+                Name="NoGoButton_"
+                Visibility="Collapsed"
+                Width="200"
+                Height="120" 
+                BorderThickness="0,0,0,0" 
+                Background="Red"
+                Click="NoGoButton" Margin="0,0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+
+                <TextBlock
+                    Text="No Go"
+                    FontSize="30"
+                    Foreground="White"/>
+            </Button>
+
+
+
+
+
+
+        </StackPanel>
+
         
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="QuestionText"
+            Text="Question"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+
+        <TextBlock
+            Visibility="Collapsed"
+            Name="Rest"
+            Text="Rest Time"
+            Foreground="White"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="23"/>
+        <TextBlock Visibility="Collapsed" Name="GoText" FontSize="25" Foreground="White"  HorizontalAlignment="Center" Height="33" Margin="200,0,0,0" TextWrapping="Wrap" Text="You Clicked Right!" VerticalAlignment="Center" Width="385"/>
+        <TextBlock Visibility="Collapsed" Name="NoGoText" FontSize="25" Foreground="White"  HorizontalAlignment="Center" Height="33" Margin="200,0,0,0" TextWrapping="Wrap" Text="You Clicked Wrong!" VerticalAlignment="Center" Width="385"/>
+
     </Grid>
+
 </Page>
