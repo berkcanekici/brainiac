@@ -48,8 +48,8 @@ namespace BrainiacApp
 
         public void changeQuestion(int questionNo)
         {
-            
-            if(questionNo==2)
+           
+            if (questionNo==2)
             {
                 Rest.Visibility = Visibility.Collapsed;
                 QuestionText.Visibility = Visibility.Visible;
@@ -78,6 +78,7 @@ namespace BrainiacApp
                 QuestionText.Text = Properties.strings.T1Q5;
                 mainTest.initiateTest1();
             }
+            
         }
 
         public void changeToRestTime()

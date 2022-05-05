@@ -136,7 +136,7 @@
                             x:Name="remaining"
                             Margin="0,10,0,40"
                             HorizontalAlignment="Center"
-                            Text="6"
+                            Text="5"
                             FontSize="23"
                             Foreground="#17B978"/>
 
