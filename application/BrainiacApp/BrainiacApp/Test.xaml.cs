@@ -16,45 +16,6 @@ using System.Threading;
 using System.Globalization;
 using System.Windows.Threading;
 
-
-/*
- <Canvas
-            Name="ButtonPanel"
-            Visibility="Visible">
-            <Image
-                        Visibility="Visible"
-                        Name="ReturnBackImage"
-                        HorizontalAlignment="Stretch" 
-                        VerticalAlignment="Stretch"
-                        Height="825"
-                        Width="1170"
-                        Stretch="Fill">
-                <Image.Source>
-                    <BitmapImage  
-                                 UriSource="/Images/resultEkranYalan.png" />
-                </Image.Source>
-            </Image>
-
-            <Button 
-                 Width="233"
-                Height="53" 
-                BorderThickness="0,0,0,0" 
-                Background="#086972"
-                Click="ReturnBack" Canvas.Left="869" Canvas.Top="708">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="23"/>
-                    </Style>
-                </Button.Resources>
-
-                <TextBlock
-                    Text="Return Back"
-                    FontSize="16"
-                    Foreground="White"/>
-            </Button>
-        </Canvas>
- */
-
 namespace BrainiacApp
 {
     /// <summary>
@@ -70,8 +31,8 @@ namespace BrainiacApp
         private Test5 test5;
         private String Test2Q1, Test2Q2, Test2Q3;
         private String Test4Q1, Test4Q2, Test4Q3, Test4Q4, Test4Q5;
-        private int currentTest = 4;
-        private int currentQuestion = 4;
+        private int currentTest = 0;
+        private int currentQuestion = 0;
         private int remainingInCurrentTest;
         DispatcherTimer GeriSayim;
         DispatcherTimer restTimer;
@@ -141,6 +102,7 @@ namespace BrainiacApp
                 remainingInCurrentTest = 5;
                 QuestionFrame.NavigationService.Navigate(test1);
                 TestName.Text = "Mental Imagery Test";
+                testNo.Text = "1";
             }
             else if(currentTest==2)
             {
@@ -148,6 +110,7 @@ namespace BrainiacApp
                 remainingInCurrentTest = 3;
                 QuestionFrame.NavigationService.Navigate(test2);
                 TestName.Text = "Rorschach Test";
+                testNo.Text = "2";
             }
             else if(currentTest==3)
             {
@@ -155,6 +118,7 @@ namespace BrainiacApp
                 remainingInCurrentTest = 6;
                 QuestionFrame.NavigationService.Navigate(test3);
                 TestName.Text = "Dual N-Back Test";
+                testNo.Text = "3";
             }
             else if(currentTest==4)
             {
@@ -162,6 +126,7 @@ namespace BrainiacApp
                 remainingInCurrentTest = 5;
                 QuestionFrame.NavigationService.Navigate(test4);
                 TestName.Text = "Verb Generation Test";
+                testNo.Text = "4";
             }
             else if(currentTest==5)
             {
@@ -169,6 +134,7 @@ namespace BrainiacApp
                 remainingInCurrentTest = 13;
                 QuestionFrame.NavigationService.Navigate(test5);
                 TestName.Text = "Go-No/Go Test";
+                testNo.Text = "5";
             }
         }
         private int increment = 0;
@@ -219,10 +185,8 @@ namespace BrainiacApp
             }
             else if (currentTest == 2) {
                 if (currentQuestion == 1) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
-                        Test2Q1 = test2.InputBox.Text;
-                        test2.InputBox.Text = "";
+                    timerProgress.Maximum = 20;
+                    if (increment == 20) {
                         GeriSayim.Stop();
 
                         restQuestion();
@@ -230,20 +194,16 @@ namespace BrainiacApp
                     }
                 }
                 else if (currentQuestion == 2) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
-                        Test2Q2 = test2.InputBox.Text;
-                        test2.InputBox.Text = "";
+                    timerProgress.Maximum = 20;
+                    if (increment == 20) {
                         GeriSayim.Stop();
                         restQuestion();
 
                     }
                 }
                 else if (currentQuestion == 3) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
-                        Test2Q3 = test2.InputBox.Text;
-                        test2.InputBox.Text = "";
+                    timerProgress.Maximum = 20;
+                    if (increment == 20) {
                         GeriSayim.Stop();
                         changeTest();
                     }
@@ -343,8 +303,8 @@ namespace BrainiacApp
             }
             else if (currentTest == 4) {
                 if (currentQuestion == 1) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
+                    timerProgress.Maximum = 15;
+                    if (increment == 15) {
                         Test4Q1 = test4.InputBox.Text;
                         test4.InputBox.Text = "";
                         GeriSayim.Stop();
@@ -354,8 +314,8 @@ namespace BrainiacApp
                     }
                 }
                 else if (currentQuestion == 2) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
+                    timerProgress.Maximum = 15;
+                    if (increment == 15) {
                         Test4Q2 = test4.InputBox.Text;
                         test4.InputBox.Text = "";
                         GeriSayim.Stop();
@@ -364,8 +324,8 @@ namespace BrainiacApp
                     }
                 }
                 else if (currentQuestion == 3) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
+                    timerProgress.Maximum = 15;
+                    if (increment == 15) {
                         Test4Q3 = test4.InputBox.Text;
                         test4.InputBox.Text = "";
 
@@ -374,8 +334,8 @@ namespace BrainiacApp
                     }
                 }
                 else if (currentQuestion == 4) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
+                    timerProgress.Maximum = 15;
+                    if (increment == 15) {
                         Test4Q4 = test4.InputBox.Text;
                         test4.InputBox.Text = "";
                         GeriSayim.Stop();
@@ -383,8 +343,8 @@ namespace BrainiacApp
                     }
                 }
                 else if (currentQuestion == 5) {
-                    timerProgress.Maximum = 3;
-                    if (increment == 3) {
+                    timerProgress.Maximum = 15;
+                    if (increment == 15) {
                         Test4Q5 = test4.InputBox.Text;
                         test4.InputBox.Text = "";
                         GeriSayim.Stop();
@@ -501,9 +461,9 @@ namespace BrainiacApp
         }
         private void endTest()
         {
-            MessageBox.Show("testEnded");
             FirstGrid.Visibility = Visibility.Collapsed;
             ButtonPanel.Visibility = Visibility.Visible;
+            TestName.Text = "Your Results";
             //TODO
             //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
         }
@@ -529,9 +489,9 @@ namespace BrainiacApp
                 increment1 = 0;
                 test1.changeQuestion(currentQuestion + 1);
             }
-            else if (currentTest == 2 && increment1 == 5) {
+            else if (currentTest == 2 && increment1 == 10) {
                 restTimer.Stop();
-                increment1 = 0;
+                increment1 = 10;
                 test2.changeQuestion(currentQuestion + 1);
             }
             else if (currentTest == 3 && increment1 == 5) {

@@ -173,22 +173,38 @@ Free your mind.</value>
 (Can be multiple things)</value>
   </data>
   <data name="T3Info1" xml:space="preserve">
-    <value>There will be a 3x3 board consisting of squares. Each question will consist of 3 parts. </value>
+    <value>There will be a 3x3 board consisting of squares. Each question will 
+consist of 3 parts. In the first part, a square will light up and a letter
+will be shown on it. You have to remember the square and the letter.
+This will be repeated for the second part and the third part too.</value>
   </data>
   <data name="T3Info2" xml:space="preserve">
-    <value>In the first part, a square will light up and a letter will be shown on it.</value>
+    <value>In the third part you will have choices to select. If the square and the
+letter matches the ones from the first part, then you select both match.
+If they do not match, you select no match. If only one of them matches
+you select the corresponding match.</value>
   </data>
   <data name="T3Info3" xml:space="preserve">
-    <value>You have to remember the square and the letter. In the third part you will have choices to select. </value>
+    <value>For first and second parts you will have 3 seconds. For the third part,
+You will have 4 seconds.</value>
   </data>
   <data name="T3Info4" xml:space="preserve">
-    <value>If the square and the letter matches the ones from the first part, then you select both match.</value>
+    <value>This will be repeated for 7 times. There will not be rest times.</value>
   </data>
-  <data name="T3Info5" xml:space="preserve">
-    <value>If they do not match, you select no match. If only one of them matches you select the corresponding match.</value>
+  <data name="T4Info1" xml:space="preserve">
+    <value>You will be given a noun and then you should think of a verb
+related to it. Then you need to enter the verb into a text box.</value>
   </data>
-  <data name="T4Info" xml:space="preserve">
-    <value>Think of a verb related to given noun.</value>
+  <data name="T4Info2" xml:space="preserve">
+    <value>However, try to think of unusal verbs. Do not write the most
+common verb you can think of.</value>
+  </data>
+  <data name="T4Info3" xml:space="preserve">
+    <value>You will be given 15 seconds for each noun. Do not leave
+the textbox empty.</value>
+  </data>
+  <data name="T4Info4" xml:space="preserve">
+    <value>You will be given 5 second rest time between each noun.</value>
   </data>
   <data name="T4Q1" xml:space="preserve">
     <value>Pencil</value>
@@ -206,13 +222,18 @@ Free your mind.</value>
     <value>School</value>
   </data>
   <data name="T5Info1" xml:space="preserve">
-    <value>You will be given some commands randomly. This commands will say either</value>
+    <value>You will be given some commands randomly. This commands
+will say either “Go” or “Don’t Go”. If you see “Go” you should
+click the button which says “Go”. If you see “Don’t Go”, you
+should wait till the next command arrives.</value>
   </data>
   <data name="T5Info2" xml:space="preserve">
-    <value>“Go” or “Don’t Go”. If you see “Go” you should click the button which says “Go”.</value>
+    <value>Your speed will be important because commands will
+stay 2-5 seconds. If you fail commands, it
+will be noted.</value>
   </data>
   <data name="T5Info3" xml:space="preserve">
-    <value>If you see “Don’t Go”, you should wait till the next command arrives.</value>
+    <value>This test will last in total 40 seconds. There will be no rest.</value>
   </data>
   <data name="T5Q1" xml:space="preserve">
     <value />

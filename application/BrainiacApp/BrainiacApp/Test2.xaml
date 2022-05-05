@@ -116,10 +116,6 @@
                 VerticalAlignment="Center"
                 FontSize="23"/>
 
-            
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Margin="265,0,0,0" TextWrapping="Wrap" Text="" Name="InputBox" Width="232"/>
-
-
         </StackPanel>
 
         <TextBlock

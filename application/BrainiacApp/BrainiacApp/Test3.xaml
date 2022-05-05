@@ -22,7 +22,7 @@
                 TextAlignment="Center"
                 Text="T2Info1"
                 Foreground="White"
-                FontSize="13"/>
+                FontSize="23"/>
 
             <TextBlock
                 Name="T3Info2"
@@ -30,7 +30,7 @@
                 TextAlignment="Center"
                 Text="T2Info2"
                 Foreground="White"
-                FontSize="13"/>
+                FontSize="23"/>
 
             <TextBlock
                 Name="T3Info3"
@@ -38,7 +38,7 @@
                 TextAlignment="Center"
                 Text="T2Info3"
                 Foreground="White"
-                FontSize="13"/>
+                FontSize="23"/>
 
             <TextBlock
                 Name="T3Info4"
@@ -46,15 +46,7 @@
                 TextAlignment="Center"
                 Text="T2Info4"
                 Foreground="White"
-                FontSize="13" Height="18"/>
-
-            <TextBlock
-                Name="T3Info5"
-                Margin="30,0,30,20"
-                TextAlignment="Center"
-                Text="T2Info5"
-                Foreground="White"
-                FontSize="13" Height="22"/>
+                FontSize="23"/>
 
             <Button
                 Width="200"

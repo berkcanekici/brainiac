@@ -42,7 +42,6 @@ namespace BrainiacApp {
             T3Info2.Text = Properties.strings.T3Info2;
             T3Info3.Text = Properties.strings.T3Info3;
             T3Info4.Text = Properties.strings.T3Info4;
-            T3Info5.Text = Properties.strings.T3Info5;
             //QuestionText.Text = Properties.strings.T2Q;
         }
         private void StartTest3(object sender, RoutedEventArgs e) {

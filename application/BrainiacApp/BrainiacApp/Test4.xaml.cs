@@ -30,7 +30,10 @@ namespace BrainiacApp {
 
         public void setLanguage(String lang) {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(lang);
-            T4Info.Text = Properties.strings.T4Info;
+            T4Info1.Text = Properties.strings.T4Info1;
+            T4Info2.Text = Properties.strings.T4Info2;
+            T4Info3.Text = Properties.strings.T4Info3;
+            T4Info4.Text = Properties.strings.T4Info4;
             QuestionText.Text = Properties.strings.T4Q1;
         }
         private void StartTest4(object sender, RoutedEventArgs e) {

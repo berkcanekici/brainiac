@@ -15,6 +15,7 @@
         <Canvas
             Name="ButtonPanel"
             Visibility="Collapsed">
+            
             <Image
                         Visibility="Visible"
                         Name="ReturnBackImage"
@@ -138,7 +139,6 @@
                             Text="6"
                             FontSize="23"
                             Foreground="#17B978"/>
-                        <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
 
                     </StackPanel>
 

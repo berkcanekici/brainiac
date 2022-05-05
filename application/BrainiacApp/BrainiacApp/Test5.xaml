@@ -22,7 +22,7 @@
                 TextAlignment="Center"
                 Text="Q1Info1"
                 Foreground="White"
-                FontSize="20"/>
+                FontSize="23"/>
 
             <TextBlock
                 Name="T5Info2"
@@ -30,7 +30,7 @@
                 TextAlignment="Center"
                 Text="Q1Info2"
                 Foreground="White"
-                FontSize="20"/>
+                FontSize="23"/>
             
 
             <TextBlock
@@ -39,7 +39,7 @@
                 TextAlignment="Center"
                 Text="Q1Info3"
                 Foreground="White"
-                FontSize="20"/>
+                FontSize="23"/>
 
             <Button
                 Width="200"
