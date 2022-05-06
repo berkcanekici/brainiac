@@ -31,7 +31,7 @@ namespace BrainiacApp
         private Test5 test5;
         private String Test2Q1, Test2Q2, Test2Q3;
         private String Test4Q1, Test4Q2, Test4Q3, Test4Q4, Test4Q5;
-        private int currentTest = 3;
+        private int currentTest = 0;
         private int currentQuestion = 0;
         private int remainingInCurrentTest;
         DispatcherTimer GeriSayim;
