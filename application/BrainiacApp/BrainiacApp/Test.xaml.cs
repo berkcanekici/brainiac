@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Threading;
 using System.Globalization;
 using System.Windows.Threading;
+using System.IO.Ports;
+using System.IO;
 
 namespace BrainiacApp
 {
@@ -29,6 +21,7 @@ namespace BrainiacApp
         private Test3 test3;
         private Test4 test4;
         private Test5 test5;
+        public SerialPort port;
         private String Test2Q1, Test2Q2, Test2Q3;
         private String Test4Q1, Test4Q2, Test4Q3, Test4Q4, Test4Q5;
         private int currentTest = 0;
@@ -36,6 +29,8 @@ namespace BrainiacApp
         private int remainingInCurrentTest;
         DispatcherTimer GeriSayim;
         DispatcherTimer restTimer;
+        public FileStream fs ;
+        StreamWriter sw;
         public Test()
         {
             InitializeComponent();
@@ -45,6 +40,14 @@ namespace BrainiacApp
             test3=new Test3(this);  
             test4=new Test4(this);  
             test5=new Test5(this);
+            port = new SerialPort();
+            fs = new FileStream("deneme.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            sw = new StreamWriter(fs);
+            port.BaudRate = 9600;
+            port.PortName = "COM5";
+            port.Open();
+            port.Write("Hi, I am trying to talk to you.");
+
         }
 
         private void NameTextboxClicked(object sender, RoutedEventArgs e)
@@ -151,11 +154,12 @@ namespace BrainiacApp
                 testNo.Text = "5";
             }
         }
-        private int increment = 0;
+        private double increment = 0;
         private int increment1 = 0;
         private void dtTicker(object sender, EventArgs e) {
-
-            increment++;
+            sw.WriteLine(port.ReadLine());
+            Console.WriteLine(port.ReadLine());
+            increment += 0.25;
             timerTextBlock.Text = increment.ToString();
             timerProgress.Value = increment;
             if (currentTest == 1) {
@@ -493,6 +497,7 @@ namespace BrainiacApp
         {
            
             increment1++;
+            port.ReadExisting();
             timerTextBlock.Text = increment1.ToString();
             if(currentTest == 1)
             {
@@ -562,7 +567,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
             
@@ -587,7 +592,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
@@ -610,7 +615,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
@@ -632,7 +637,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
             increment = 0;
@@ -654,7 +659,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 40;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(1);
+            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
