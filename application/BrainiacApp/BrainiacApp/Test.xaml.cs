@@ -489,7 +489,18 @@ namespace BrainiacApp
         {
             FirstGrid.Visibility = Visibility.Collapsed;
             ButtonPanel.Visibility = Visibility.Visible;
-            TestName.Text = "Your Results";
+            skill1P.Value = 55;
+            skill1P.Maximum = 100;
+            skill1P.Minimum = 0;
+            skill2P.Value = 55;
+            skill2P.Maximum = 100;
+            skill2P.Minimum = 0;
+            skill3P.Value = 55;
+            skill3P.Maximum = 100;
+            skill3P.Minimum = 0;
+            skill4P.Value = 55;
+            skill4P.Maximum = 100;
+            skill4P.Minimum = 0;
             //TODO
             //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
         }
@@ -548,6 +559,8 @@ namespace BrainiacApp
             restTimer.Tick += restTicker;
             restTimer.Start();
         }
+
+
         public void initiateTest1()
         {
             currentQuestion++;
@@ -571,9 +584,6 @@ namespace BrainiacApp
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
             
-     
-
-                
             
         }
 

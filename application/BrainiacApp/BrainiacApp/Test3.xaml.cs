@@ -60,30 +60,50 @@ namespace BrainiacApp {
                 QuestionPanel.Visibility = Visibility.Visible;
                 A1.Content = "";
                 B2.Content = "M";
+                Button1.Background = Brushes.DarkCyan;
+                Button2.Background = Brushes.DarkCyan;
+                Button3.Background = Brushes.DarkCyan;
+                Button4.Background = Brushes.DarkCyan;
                 mainTest.initiateTest3();
             }
             if (questionNo == 3) {
                 QuestionPanel.Visibility = Visibility.Visible;
                 C3.Content = "";
                 B3.Content = "X";
+                Button1.Background = Brushes.DarkCyan;
+                Button2.Background = Brushes.DarkCyan;
+                Button3.Background = Brushes.DarkCyan;
+                Button4.Background = Brushes.DarkCyan;
                 mainTest.initiateTest3();
             }
             if (questionNo == 4) {
                 QuestionPanel.Visibility = Visibility.Visible;
                 B3.Content = "";
                 A1.Content = "A";
+                Button1.Background = Brushes.DarkCyan;
+                Button2.Background = Brushes.DarkCyan;
+                Button3.Background = Brushes.DarkCyan;
+                Button4.Background = Brushes.DarkCyan;
                 mainTest.initiateTest3();
             }
             if (questionNo == 5) {
                 QuestionPanel.Visibility = Visibility.Visible;
                 A2.Content = "";
                 B2.Content = "F";
+                Button1.Background = Brushes.DarkCyan;
+                Button2.Background = Brushes.DarkCyan;
+                Button3.Background = Brushes.DarkCyan;
+                Button4.Background = Brushes.DarkCyan;
                 mainTest.initiateTest3();
             }
             if (questionNo == 6) {
                 QuestionPanel.Visibility = Visibility.Visible;
                 B2.Content = "";
                 A2.Content = "I";
+                Button1.Background = Brushes.DarkCyan;
+                Button2.Background = Brushes.DarkCyan;
+                Button3.Background = Brushes.DarkCyan;
+                Button4.Background = Brushes.DarkCyan;
                 mainTest.initiateTest3();
             }
         }
@@ -193,15 +213,23 @@ namespace BrainiacApp {
 
         private void BothMatch(object sender, RoutedEventArgs e) {
             Results[counter] = 1;
+            Button button = sender as Button;
+            button.Background = Brushes.Turquoise;
         }
         private void NoMatch(object sender, RoutedEventArgs e) {
             Results[counter] = 2;
+            Button button = sender as Button;
+            button.Background = Brushes.Turquoise;
         }
         private void LetterMatch(object sender, RoutedEventArgs e) {
             Results[counter] = 3;
+            Button button = sender as Button;
+            button.Background = Brushes.Turquoise;
         }
         private void SquareMatch(object sender, RoutedEventArgs e) {
             Results[counter] = 4;
+            Button button = sender as Button;
+            button.Background = Brushes.Turquoise;
         }
     }
 }

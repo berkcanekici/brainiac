@@ -12,42 +12,250 @@
 
     <Grid>
 
-        <Canvas
+        <Grid
             Name="ButtonPanel"
             Visibility="Collapsed">
-            
-            <Image
-                        Visibility="Visible"
-                        Name="ReturnBackImage"
-                        HorizontalAlignment="Stretch" 
-                        VerticalAlignment="Stretch"
-                        Height="825"
-                        Width="1170"
-                        Stretch="Fill">
-                <Image.Source>
-                    <BitmapImage  
-                                 UriSource="/Images/resultEkranYalan.png" />
-                </Image.Source>
-            </Image>
 
-            <Button 
-                 Width="233"
-                Height="53" 
-                BorderThickness="0,0,0,0" 
-                Background="#086972"
-                Click="ReturnBack" Canvas.Left="869" Canvas.Top="708">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="23"/>
-                    </Style>
-                </Button.Resources>
+            <StackPanel>
 
                 <TextBlock
-                    Text="Return Back"
-                    FontSize="16"
-                    Foreground="White"/>
-            </Button>
-        </Canvas>
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Your Results"
+                    Foreground="White"
+                    FontSize="39"
+                    Margin="0,60,0,20"/>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    Margin="20,0,20,0">
+
+                    <StackPanel
+                        Orientation="Vertical">
+
+                        <Grid
+                            Margin="0,0,0,10">
+                            <Grid
+                            HorizontalAlignment="Left"
+                            Width="700"
+                            Background="Black"
+                            Opacity="0.25"/>
+
+                            <StackPanel>
+                                <TextBlock
+                                Margin="15,20,15,5"
+                                Text="Mental Imagery"
+                                Foreground="White"
+                                FontSize="23"/>
+
+                                <TextBlock
+                                Margin="15,0,15,20"
+                                Name="skill1Res"
+                                Text="According to our test, your skill level is %55. To test this we have 
+observed your visual &#x0a;cortex during related tasks. The activation 
+levels can be found in the graph. According to &#x0a;our findings, you 
+are above average at this skill. If you want to learn more about 
+what &#x0a;that means, you can check About Skills."
+                                Foreground="White"
+                                FontSize="17"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <Grid
+                            Margin="0,0,0,10">
+                            <Grid
+                            HorizontalAlignment="Left"
+                            Width="700"
+                            Background="Black"
+                            Opacity="0.25"/>
+
+                            <StackPanel>
+                                <TextBlock
+                                Margin="15,20,15,5"
+                                Text="Long Term &amp; Working Memory"
+                                Foreground="White"
+                                FontSize="23"/>
+
+                                <TextBlock
+                                Margin="15,0,15,20"
+                                Name="skill2Res"
+                                Text="According to our test, your skill level is %55. To test this we have 
+observed your &#x0a;preforontal cortex during related tasks. The 
+activation levels can be found in the graph. &#x0a;According to our 
+findings, you are above average at this skill. If you want to learn 
+more &#x0a;about what that means, you can check About Skills."
+                                Foreground="White"
+                                FontSize="17"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <Grid
+                            Margin="0,0,0,10">
+                            <Grid
+                            HorizontalAlignment="Left"
+                            Width="700"
+                            Background="Black"
+                            Opacity="0.25"/>
+
+                            <StackPanel>
+                                <TextBlock
+                                Margin="15,20,15,5"
+                                Text="Creativity"
+                                Foreground="White"
+                                FontSize="23"/>
+
+                                <TextBlock
+                                Margin="15,0,15,20"
+                                Name="skill3Res"
+                                Text="According to our test, your skill level is %55. To test this we have 
+observed your &#x0a;frontopolar cortex during related tasks. The 
+activation levels can be found in the graph. &#x0a;According to our 
+findings, you are above average at this skill. If you want to learn 
+more &#x0a;about what that means, you can check About Skills."
+                                Foreground="White"
+                                FontSize="17"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <Grid>
+                            <Grid
+                            HorizontalAlignment="Left"
+                            Width="700"
+                            Background="Black"
+                            Opacity="0.25"/>
+
+                            <StackPanel>
+                                <TextBlock
+                                Margin="15,20,15,5"
+                                Text="Response Speed &amp; Accuracy"
+                                Foreground="White"
+                                FontSize="23"/>
+
+                                <TextBlock
+                                Margin="15,0,15,22.2"
+                                Name="skill4Res"
+                                Text="According to our test, your skill level is %55. To test this we have 
+observed your frontal &#x0a;cortex during related tasks. The activation 
+levels can be found in the graph. According to &#x0a;our findings, you 
+are above average at this skill. If you want to learn more about 
+what &#x0a;that means, you can check About Skills."
+                                Foreground="White"
+                                FontSize="17"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Vertical"
+                        Margin="10,0,20,0">
+
+                        <Grid>
+                            <Grid
+                            HorizontalAlignment="Left"
+                            Width="215"
+                            Background="Black"
+                            Opacity="0.25"/>
+
+                            <StackPanel
+                                HorizontalAlignment="Center">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Margin="15,15,15,5"
+                                    Text="Mental Imagery"
+                                    Foreground="White"
+                                    FontSize="20"/>
+
+                                <xrpb:RadialProgressBar x:Name="skill1P" Height="85" Width="85" Foreground="#17B978"/>
+                                <TextBlock x:Name="skill1PText"
+                                    Text="%55"
+                                    Margin="0,-53,0,0"
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Foreground="White"/>
+                                
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Margin="15,20,15,5"
+                                    Text="    Long Term &amp; &#x0a;Working Memory"
+                                    Foreground="White"
+                                    FontSize="20"/>
+
+                                <xrpb:RadialProgressBar x:Name="skill2P" Height="85" Width="85" Foreground="#17B978"/>
+                                <TextBlock x:Name="skill2PText"
+                                    Text="%55"
+                                    Margin="0,-53,0,0"
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Foreground="White"/>
+                                
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Margin="15,20,15,5"
+                                    Text="Creativity"
+                                    Foreground="White"
+                                    FontSize="20"/>
+
+                                <xrpb:RadialProgressBar x:Name="skill3P" Height="85" Width="85" Foreground="#17B978"/>
+                                <TextBlock x:Name="skill3PText"
+                                    Text="%55"
+                                    Margin="0,-53,0,0"
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Foreground="White"/>
+                                
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Margin="15,20,15,5"
+                                    Text="Response Speed&#x0a;    &amp; Accuracy"
+                                    Foreground="White"
+                                    FontSize="20"/>
+
+                                <xrpb:RadialProgressBar x:Name="skill4P" Height="85" Width="85" Foreground="#17B978"/>
+                                <TextBlock x:Name="skill4PText"
+                                    Text="%55"
+                                    Margin="0,-53,0,0"
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Foreground="White"/>
+                                
+                                <Button 
+                                    Margin="0,10,0,15"
+                                    Width="160"
+                                    Height="45" 
+                                    BorderThickness="0,0,0,0" 
+                                    Background="#086972"
+                                    Click="ReturnBack">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="23"/>
+                                        </Style>
+                                    </Button.Resources>
+
+                                    <TextBlock
+                                    Text="Return Back"
+                                    FontSize="16"
+                                    Foreground="White"/>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
 
         <Grid
             Name="FirstGrid"

@@ -169,4 +169,67 @@ Aklınızı boşaltın.</value>
   <data name="T2Q" xml:space="preserve">
     <value>Bu resim size ne veya neleri çağırıştırıyor?</value>
   </data>
+  <data name="T3Info1" xml:space="preserve">
+    <value>Karşınızda 3x3 karelerden oluşan bir tablo olacak. Her soru
+3 parttan oluşacak. Birinci partta bir kare aydınlanacak ve 
+içinde bir harf görünecek. Bu kareyi ve harfi unutmamalısınız.
+Bu 2. Ve 3. partta da tekrarlanacak.</value>
+  </data>
+  <data name="T3Info2" xml:space="preserve">
+    <value>3. Partta seçenekleriniz olacak. Eğer aydınlanan kare ve harf
+birinci parttakiyle aynı ise, ikili eşleşmeyi seçmelisiniz. Eğer
+farklı ise, sıfır eşleşmeyi seçmelisiniz. Eğer biri aynı ise ona
+göre seçim yapmalısınız.</value>
+  </data>
+  <data name="T3Info3" xml:space="preserve">
+    <value>Birinci ve ikinci partlar için 3’er, üçüncü part için 4 saniyeniz olacak.</value>
+  </data>
+  <data name="T3Info4" xml:space="preserve">
+    <value>Bu 6 kere tekrarlanacak. Dinlenme olmayacak.</value>
+  </data>
+  <data name="T4Info1" xml:space="preserve">
+    <value>Size bir kelime verilecek ve bu kelimeye uygun bir fiil
+düşünmelisiniz. Ardından bu fiili bir text kutucuğuna
+yazmalısınız.</value>
+  </data>
+  <data name="T4Info2" xml:space="preserve">
+    <value>Ancak akla ilk gelecek fiil yerine daha özel fiiller
+bulmaya çalışın.</value>
+  </data>
+  <data name="T4Info3" xml:space="preserve">
+    <value>Her kelime için 15’er saniyeniz olacak. Text kutucuğunu
+boş bırakmayın.</value>
+  </data>
+  <data name="T4Info4" xml:space="preserve">
+    <value>Kelime aralarında 5’er saniye dinlenme süreniz olacak.</value>
+  </data>
+  <data name="T4Q1" xml:space="preserve">
+    <value>Kalem</value>
+  </data>
+  <data name="T4Q2" xml:space="preserve">
+    <value>Müzik</value>
+  </data>
+  <data name="T4Q3" xml:space="preserve">
+    <value>Oyun</value>
+  </data>
+  <data name="T4Q4" xml:space="preserve">
+    <value>Aile</value>
+  </data>
+  <data name="T4Q5" xml:space="preserve">
+    <value>Okul</value>
+  </data>
+  <data name="T5Info1" xml:space="preserve">
+    <value>Size belli komutlar rastgele bir şekilde verilecek.
+Bu kotmular ya “Go” ya da “Don’t Go” olacak. Eğer
+“Go” görürseniz üstünde “Go” yazan butona basmalısınız. 
+Eğer “Don’t Go” görürseniz, hiçbir şey yapmadan bir sonraki
+komutu beklemelisiniz.</value>
+  </data>
+  <data name="T5Info2" xml:space="preserve">
+    <value>Hızınız önemli olacak çünkü komutlar 2-5 saniye
+ekranda kalacak. Eğer başarısız olursanız bu kaydedilecek.</value>
+  </data>
+  <data name="T5Info3" xml:space="preserve">
+    <value>Bu test toplam 40 saniye sürecek ve dinlenme olmayacak.</value>
+  </data>
 </root>
