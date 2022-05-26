@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Windows.Threading;
 using System.IO.Ports;
 using System.IO;
-
+using System.Collections;
 namespace BrainiacApp
 {
     /// <summary>
@@ -24,13 +24,15 @@ namespace BrainiacApp
         public SerialPort port;
         private String Test2Q1, Test2Q2, Test2Q3;
         private String Test4Q1, Test4Q2, Test4Q3, Test4Q4, Test4Q5;
-        private int currentTest = 0;
+        private int currentTest =0 ;
         private int currentQuestion = 0;
         private int remainingInCurrentTest;
         DispatcherTimer GeriSayim;
         DispatcherTimer restTimer;
+        DispatcherTimer readTimer;
         public FileStream fs ;
         StreamWriter sw;
+        ArrayList testValues = new ArrayList();
         public Test()
         {
             InitializeComponent();
@@ -41,8 +43,7 @@ namespace BrainiacApp
             test4=new Test4(this);  
             test5=new Test5(this);
             port = new SerialPort();
-            fs = new FileStream("deneme.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            sw = new StreamWriter(fs);
+
             port.BaudRate = 9600;
             port.PortName = "COM5";
             port.Open();
@@ -92,10 +93,12 @@ namespace BrainiacApp
                 QuestionFrame.Visibility = Visibility.Visible;
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
-               
+                fs = new FileStream(userName, FileMode.OpenOrCreate, FileAccess.Write);
+                sw = new StreamWriter(fs);
                 changeTest();
                 increment = 0;
                 increment1 = 0;
+                increment2 = 0.0;
                 questionNo.Text = currentQuestion.ToString();
                 remaining.Text = "5";
                 timerTextBlock.Text = "0";
@@ -156,10 +159,22 @@ namespace BrainiacApp
         }
         private double increment = 0;
         private int increment1 = 0;
+        private double increment2 = 0.0;
+        
+        private void readval()
+        {
+            increment2 = 0;
+            readTimer = new DispatcherTimer();
+            readTimer.Interval = TimeSpan.FromSeconds(0);
+            readTimer.Tick += readTicker;
+            readTimer.Start();
+
+        }
         private void dtTicker(object sender, EventArgs e) {
-            sw.WriteLine(port.ReadLine());
-            Console.WriteLine(port.ReadLine());
-            increment += 0.25;
+
+
+            readval();
+            increment += 1;
             timerTextBlock.Text = increment.ToString();
             timerProgress.Value = increment;
             if (currentTest == 1) {
@@ -169,8 +184,10 @@ namespace BrainiacApp
                         GeriSayim.Stop();
                         
                         restQuestion();
-
                     }
+                   
+
+
                 }
                 else if (currentQuestion == 2) {
                     timerProgress.Maximum = 12;
@@ -180,6 +197,7 @@ namespace BrainiacApp
                         restQuestion();
 
                     }
+                    
                 }
                 else if (currentQuestion == 3) {
                     timerProgress.Maximum = 15;
@@ -188,6 +206,7 @@ namespace BrainiacApp
                         
                         restQuestion();
                     }
+                   
                 }
                 else if (currentQuestion == 4) {
                     timerProgress.Maximum = 20;
@@ -196,6 +215,7 @@ namespace BrainiacApp
                         
                         restQuestion();
                     }
+                    
                 }
                 else if (currentQuestion == 5) {
                     timerProgress.Maximum = 26;
@@ -204,6 +224,7 @@ namespace BrainiacApp
                         
                         changeTest();
                     }
+                    
                 }
             }
             else if (currentTest == 2) {
@@ -211,19 +232,21 @@ namespace BrainiacApp
                     timerProgress.Maximum = 20;
                     if (increment == 20) {
                         GeriSayim.Stop();
-                        
+                        readTimer.Stop();
                         restQuestion();
 
                     }
+                    
                 }
                 else if (currentQuestion == 2) {
                     timerProgress.Maximum = 20;
                     if (increment == 20) {
                         GeriSayim.Stop();
-                       
+                        readTimer.Stop();
                         restQuestion();
 
                     }
+                   
                 }
                 else if (currentQuestion == 3) {
                     timerProgress.Maximum = 20;
@@ -232,6 +255,7 @@ namespace BrainiacApp
                         
                         changeTest();
                     }
+                    
                 }
             }
             else if (currentTest == 3) {
@@ -504,8 +528,28 @@ namespace BrainiacApp
             //TODO
             //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
         }
+        private void readTicker(object sender, EventArgs e)
+        {
+            // Memoryde yapılacak
+            //sw.WriteLine(currentTest + ";" + port.ReadLine());
+            //Console.WriteLine(currentTest + ";" + port.ReadLine());
+            testValues.Add(currentTest+";"+port.ReadLine());
+            
+            increment2 += 0.25;
+            if (increment2 == 1.0)
+            {
+                increment2 = 0.0;
+                readTimer.Stop();
+                
+            }
+            
+
+            
+            
+        }
         private void restTicker(object sender, EventArgs e)
         {
+
            
             increment1++;
             port.ReadExisting();
@@ -553,14 +597,13 @@ namespace BrainiacApp
         }
         private void restQuestion()
         {
+            readTimer.Stop();
             increment1= 0;
             restTimer = new DispatcherTimer();
             restTimer.Interval = TimeSpan.FromSeconds(1);
             restTimer.Tick += restTicker;
             restTimer.Start();
         }
-
-
         public void initiateTest1()
         {
             currentQuestion++;
@@ -580,10 +623,13 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
             
+     
+
+                
             
         }
 
@@ -602,7 +648,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
@@ -625,7 +671,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
@@ -647,7 +693,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 12;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
             increment = 0;
@@ -669,7 +715,7 @@ namespace BrainiacApp
             timerProgress.Minimum = 0;
             timerProgress.Maximum = 40;
             GeriSayim = new DispatcherTimer();
-            GeriSayim.Interval = TimeSpan.FromSeconds(0.25);
+            GeriSayim.Interval = TimeSpan.FromSeconds(1);
             GeriSayim.Tick += dtTicker;
             GeriSayim.Start();
 
@@ -680,10 +726,16 @@ namespace BrainiacApp
             GeriSayim.Stop();
             restTimer.Stop();
             increment = 0;
+
             /*Uri pageFunctionUri = new Uri("Test.xaml", UriKind.Relative);
             this.NavigationService.Navigate(pageFunctionUri);
             currentTest = 0;
             currentQuestion = 0;*/
+            foreach (string item in testValues)
+            {
+                Console.WriteLine(item);
+                sw.WriteLine(item);
+            }
             FirstGrid.Visibility = Visibility.Visible;
             ButtonPanel.Visibility = Visibility.Collapsed;
             currentTest = 0;
