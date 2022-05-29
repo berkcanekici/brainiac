@@ -1,28 +1,24 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 27 22:51:37 2022
-
-@author: ben
-"""
 import csv
 import statistics
 import numpy as np
 import math
 
 
+intervalNumber = 600
+halfInterval = intervalNumber/2
+
 def findHistogram(test, testNo):
-    minValue = min(test)
-    maxValue = max(test)
+    minValue = 3300
+    maxValue = 4100
     meanValue = statistics.mean(test)
-    #print("mean of array: {}".format(statistics.mean(test)))
-    #print("size of array: {}".format(len(test)))
-    delta = (max(test)-min(test))/ 100
+    delta = (maxValue-minValue) / intervalNumber
     
     # percent, interval, dataAmount
-    histogram = [np.zeros(100), [None] * 100, np.zeros(100)]
+    histogram = [np.zeros(intervalNumber), [None] * intervalNumber, np.zeros(intervalNumber)]
     i = minValue
     index = 0
     
+    # which one is %50
     while i < maxValue:
         if(abs(i- meanValue) < delta):
             break
@@ -31,12 +27,13 @@ def findHistogram(test, testNo):
             i  = i + delta
     temp = index
     
-    #print("index: {}".format(index))
-    if(index >50):
-        divisonResult = 50 / (100-index-1)
+    print("index: {}".format(index))
+    if(index > halfInterval):
+        print("here")
+        divisonResult = 50 / (intervalNumber-index-1)
     else:
         divisonResult = 50 / index
-        
+    print(divisonResult)
     percentage = 50
     #print(index)
     while index >= 0:
@@ -51,7 +48,7 @@ def findHistogram(test, testNo):
     #print("index: {}".format(index))
     
     percentage = 50
-    while index < 100:
+    while index < intervalNumber:
         if(percentage > 100):
             percentage = 100
         histogram[0][index] = "{:.3f}".format(percentage)
@@ -62,12 +59,12 @@ def findHistogram(test, testNo):
     
     i = minValue
     index = 0
-    while i <= max(test):
+    while i <= maxValue:
         count = 0
-        if(index == 100):
+        if(index == intervalNumber):
             break
         for j in test:
-            if(index == 99):
+            if(index == intervalNumber -1 ):
                 if(j >=i and j <= math.ceil(i+delta)):
                     count = count + 1 
             else:
@@ -82,7 +79,7 @@ def findHistogram(test, testNo):
     
     i =0 
     with open('test{}_histogram.csv'.format(testNo), 'w', newline='') as file:
-        while i< 100:
+        while i< intervalNumber:
             writer = csv.writer(file)
             data = []
             data.append(int(i+1))
