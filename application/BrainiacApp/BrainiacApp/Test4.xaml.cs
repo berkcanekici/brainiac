@@ -21,11 +21,13 @@ namespace BrainiacApp {
     /// </summary>
     public partial class Test4 : Page {
         private Test mainTest;
+        public bool[] Results;
         public Test4(Test main) {
             InitializeComponent();
             mainTest = main;
             this.FontFamily = new FontFamily("Alata");
             setLanguage("en-Us");
+            Results = new bool[5];
         }
 
         public void setLanguage(String lang) {

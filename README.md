@@ -8,12 +8,10 @@
 ## Team Members
 - Serdil Anıl Ünlü
 - Bilal Yalçınkaya
-- Mehmet Acar
 - Öner Ercan
 - Sedef Erdoğdu
 - Burak Çiçek
 - Samet Nalbant
-- Şehmus Acar
 - Yeşim Yalçın
 - Berkan Ekici
 - Eray Alçin

@@ -21,7 +21,7 @@ namespace BrainiacApp {
     /// </summary>
     public partial class Test3 : Page {
         private Test mainTest;
-        private int[] Results;
+        public int[] Results;
         private int counter;
         private int currentPart;
         private int currentTest;
@@ -191,6 +191,7 @@ namespace BrainiacApp {
 
         }
 
+        
         private void resetTiles() {
             A1.Content = "";
             A2.Content = "";

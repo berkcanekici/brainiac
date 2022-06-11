@@ -1,8 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 24 14:29:23 2022
+
+@author: ben
+"""
+#import matplotlib.pyplot as plt
 import statistics
 import numpy as np
 import histo
-testNumber = 243
-#Cleaning data and calculating mean of the 4 photodiode.
 def cleanTest(array, testArray):
     temp = []
     for i in array:
@@ -26,6 +31,9 @@ def cleanTest(array, testArray):
     testArray.append(int(total))
     """
     testArray.append(np.mean(temp))
+        #cleanValues.append(np.mean(i))
+    #print(cleanValues)
+    #print(np.mean(cleanValues))            
         
 test1values = []
 test2values = []
@@ -34,7 +42,7 @@ test5values = []
 
 index = 0
 
-while index< testNumber:
+while index< 300:
     fileString = "testData{}.txt".format(index+1)
     file = open(fileString,"r")
     test1 = [[],[],[],[]]

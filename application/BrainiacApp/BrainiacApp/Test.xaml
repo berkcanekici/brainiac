@@ -182,7 +182,7 @@ what &#x0a;that means, you can check About Skills."
                                     HorizontalAlignment="Center"
                                     FontSize="18"
                                     Foreground="White"/>
-                                
+
                                 <TextBlock
                                     HorizontalAlignment="Center"
                                     Margin="15,20,15,5"
@@ -197,7 +197,7 @@ what &#x0a;that means, you can check About Skills."
                                     HorizontalAlignment="Center"
                                     FontSize="18"
                                     Foreground="White"/>
-                                
+
                                 <TextBlock
                                     HorizontalAlignment="Center"
                                     Margin="15,20,15,5"
@@ -212,7 +212,7 @@ what &#x0a;that means, you can check About Skills."
                                     HorizontalAlignment="Center"
                                     FontSize="18"
                                     Foreground="White"/>
-                                
+
                                 <TextBlock
                                     HorizontalAlignment="Center"
                                     Margin="15,20,15,5"
@@ -227,7 +227,7 @@ what &#x0a;that means, you can check About Skills."
                                     HorizontalAlignment="Center"
                                     FontSize="18"
                                     Foreground="White"/>
-                                
+
                                 <Button 
                                     Margin="0,10,0,15"
                                     Width="160"
@@ -391,16 +391,28 @@ what &#x0a;that means, you can check About Skills."
 
                         <Grid
                             Background="#086972"
-                            Opacity="0.4"/>
+                            Opacity="0.4">
+                            
+                        </Grid>
 
                         <StackPanel>
 
                             <TextBlock
-                                Margin="0,15,0,7"
+                                Margin="-275,15,0,7"
                                 HorizontalAlignment="Center"
                                 Text="Choose Language"
                                 Foreground="White"
                                 FontSize="19"/>
+                            
+                            
+
+                            <TextBlock
+                                Margin="275,-30,0,7"
+                                HorizontalAlignment="Center"
+                                Text="Choose Port"
+                                Foreground="White"
+                                FontSize="19"/>
+                            
 
                             <StackPanel
                                 Orientation="Horizontal"
@@ -433,7 +445,7 @@ what &#x0a;that means, you can check About Skills."
                                 </StackPanel.Resources>
 
                                 <RadioButton
-                                    Margin="0,0,10,7"
+                                    Margin="-200,0,10,7"
                                     x:Name="English"
                                     Content="/Images/english.png"
                                     Height="60"
@@ -445,7 +457,7 @@ what &#x0a;that means, you can check About Skills."
                                     />
 
                                 <RadioButton
-                                    Margin="10,0,0,7"
+                                    Margin="-350,0,0,7"
                                     x:Name="Turkish"
                                     Content="/Images/turkish.png"
                                     Height="60"
@@ -475,6 +487,14 @@ what &#x0a;that means, you can check About Skills."
                                 </TextBox.Resources>
 
                             </TextBox>
+                            <ComboBox Name="PortComboBox" HorizontalAlignment="Left" Margin="315,-80,0,0" VerticalAlignment="Top" Width="120">
+                                <ComboBox.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="#FFF0F0F0"/>
+                                        <GradientStop Color="#FFF10B0B" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </ComboBox.Background>
+                            </ComboBox> 
 
                         </StackPanel>
 

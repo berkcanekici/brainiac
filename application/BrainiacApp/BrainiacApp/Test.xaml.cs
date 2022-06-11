@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -24,7 +25,7 @@ namespace BrainiacApp
         public SerialPort port;
         private String Test2Q1, Test2Q2, Test2Q3;
         private String Test4Q1, Test4Q2, Test4Q3, Test4Q4, Test4Q5;
-        private int currentTest =0 ;
+        private int currentTest = 0 ;
         private int currentQuestion = 0;
         private int remainingInCurrentTest;
         DispatcherTimer GeriSayim;
@@ -42,12 +43,19 @@ namespace BrainiacApp
             test3=new Test3(this);  
             test4=new Test4(this);  
             test5=new Test5(this);
+
+            string[] ports = null;
+
+            ports = System.IO.Ports.SerialPort.GetPortNames();
+
+            if (ports != null)
+            {
+                for(int i = 0;i < ports.Length;i++)
+                    PortComboBox.Items.Add(ports[i]);
+            }
             port = new SerialPort();
 
-            port.BaudRate = 9600;
-            port.PortName = "COM5";
-            port.Open();
-            port.Write("Hi, I am trying to talk to you.");
+            
 
         }
 
@@ -87,14 +95,20 @@ namespace BrainiacApp
         {
             if(NameEnterBox.Text!=String.Empty)
             {
+                
+
+
+                port.BaudRate = 9600;
+                port.PortName = PortComboBox.Text;
+                port.Open();
+                port.Write("Hi, I am trying to talk to you.");
+
                 userName = NameEnterBox.Text;
                 FirstPage.Visibility = Visibility.Collapsed;
                 LeftBar.Visibility = Visibility.Visible;
                 QuestionFrame.Visibility = Visibility.Visible;
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
-                fs = new FileStream(userName, FileMode.OpenOrCreate, FileAccess.Write);
-                sw = new StreamWriter(fs);
                 changeTest();
                 increment = 0;
                 increment1 = 0;
@@ -509,24 +523,286 @@ namespace BrainiacApp
 
             }
         }
-        private void endTest()
-        {
+        private void endTest() {
+            fs = new FileStream(userName, FileMode.OpenOrCreate, FileAccess.Write);
+            sw = new StreamWriter(fs);
+            for (int i = 0; i < testValues.Count - 3; i++)
+			{
+                //MessageBox.Show(testValues[i].ToString());
+                sw.WriteLine(testValues[i]);
+			}
+            sw.Close();
+            fs.Close();
+
+            
+            // BURAK
+            Console.WriteLine("Testing smth.");
+            // 1) Create Process Info
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"C:\Users\serdi\mne-python\1.0.3_0\python.exe";
+            // 2) Provide script and arguments
+            var script = @"C:\Users\serdi\Desktop\final\brainiac-main\application\BrainiacApp\BrainiacApp\user_mean.py";
+            var fileName = userName; // userName olacak çünkü hardco.
+            psi.Arguments = $"\"{script}\" \"{fileName}\"";
+            // 3) Process configuration
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            // 4) Execute process and get output
+            var errors = "";
+            var results = "";
+            using (var process = Process.Start(psi)) {
+                errors = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+            }
+
+            // 5) Display output
+            Console.WriteLine("ERRORS:");
+            Console.WriteLine(errors);
+            Console.WriteLine();
+            Console.WriteLine("Results:");
+            Console.WriteLine(results);
+            //MessageBox.Show(errors);
+
+            string[] resultSplit = results.Split('\n');
+            double[] resultsInt = new double[4];
+            NumberFormatInfo provider = new NumberFormatInfo();
+            provider.NumberDecimalSeparator = ".";
+            resultsInt[0] = Convert.ToDouble(resultSplit[2], provider);
+            resultsInt[1] = Convert.ToDouble(resultSplit[4], provider);
+            resultsInt[2] = Convert.ToDouble(resultSplit[6], provider);
+            resultsInt[3] = Convert.ToDouble(resultSplit[8], provider);
+
+            /*MessageBox.Show(resultSplit[2]);
+            MessageBox.Show(resultSplit[4]);
+            MessageBox.Show(resultSplit[6]);
+            MessageBox.Show(resultSplit[8]);*/
+            resultsInt[0] += 5;
+            if (test3.Results[0] == 3)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+            if (test3.Results[1] == 2)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+            if (test3.Results[2] == 1)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+            if (test3.Results[3] == 3)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+            if (test3.Results[4] == 4)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+            if (test3.Results[5] == 1)
+                resultsInt[1] += 1.5f;
+            else
+                resultsInt[1] -= 1.5f;
+
+            if (Test4Q1.Length == 0)
+                resultsInt[2] -= 2;
+            else
+                resultsInt[2] += 2;
+            if (Test4Q2.Length == 0)
+                resultsInt[2] -= 2;
+            else
+                resultsInt[2] += 2;
+            if (Test4Q3.Length == 0)
+                resultsInt[2] -= 2;
+            else
+                resultsInt[2] += 2;
+            if (Test4Q4.Length == 0)
+                resultsInt[2] -= 2;
+            else
+                resultsInt[2] += 2;
+            if (Test4Q5.Length == 0)
+                resultsInt[2] -= 2;
+            else
+                resultsInt[2] += 2;
+
+            if (test5.Results[0].isCorrect) {
+                if (test5.Results[0].isGo)
+                    resultsInt[3] += (3000 - test5.Results[0].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[1].isCorrect) {
+                if (test5.Results[1].isGo)
+                    resultsInt[3] += (2000 - test5.Results[1].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[2].isCorrect) {
+                if (test5.Results[2].isGo)
+                    resultsInt[3] += (3000 - test5.Results[2].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[3].isCorrect) {
+                if (test5.Results[3].isGo)
+                    resultsInt[3] += (4000 - test5.Results[3].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[4].isCorrect) {
+                if (test5.Results[4].isGo)
+                    resultsInt[3] += (3000 - test5.Results[4].msResult)  * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[5].isCorrect) {
+                if (test5.Results[5].isGo)
+                    resultsInt[3] += (5000 - test5.Results[5].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[6].isCorrect) {
+                if (test5.Results[6].isGo)
+                    resultsInt[3] += (4000 - test5.Results[6].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[7].isCorrect) {
+                if (test5.Results[7].isGo)
+                    resultsInt[3] += (3000 - test5.Results[7].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[8].isCorrect) {
+                if (test5.Results[8].isGo)
+                    resultsInt[3] += (2000 - test5.Results[8].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[9].isCorrect) {
+                if (test5.Results[9].isGo)
+                    resultsInt[3] += (3000 - test5.Results[9].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[10].isCorrect) {
+                if (test5.Results[10].isGo)
+                    resultsInt[3] += (2000 - test5.Results[10].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[11].isCorrect) {
+                if (test5.Results[11].isGo)
+                    resultsInt[3] += (3000 - test5.Results[11].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            if (test5.Results[12].isCorrect) {
+                if (test5.Results[12].isGo)
+                    resultsInt[3] += (3000 - test5.Results[12].msResult) * 0.0002f;
+                else
+                    resultsInt[3] += 1f;
+            }
+            else
+                resultsInt[3] += -1f;
+            //MessageBox.Show("gelidm0");
+            int[] finalResults = new int[4];
+            finalResults[0] = (int)resultsInt[0];
+            finalResults[1] = (int)resultsInt[1];
+            finalResults[2] = (int)resultsInt[2];
+            finalResults[3] = (int)resultsInt[3];
+            for(int i = 0;i < 4;i++)
+                //MessageBox.Show(finalResults[i].ToString());
+
+            //MessageBox.Show("gelidm1");
+            skill1Res.Text = "According to our test, your skill level is %" + finalResults[0].ToString() + ". To test this we have observed your \nvisual cortex during related tasks. The activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
+            skill2Res.Text = "According to our test, your skill level is %" + finalResults[1].ToString() + ". To test this we have observed your \npreforontal cortex during related tasks. The activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
+            skill3Res.Text = "According to our test, your skill level is %" + finalResults[2].ToString() + ". To test this we have observed your \nfrontopolar cortex during related tasks. The  activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
+            skill4Res.Text = "According to our test, your skill level is %" + finalResults[3].ToString() + ". To test this we have observed your \nfrontal cortex during related tasks. The activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
+
+            //MessageBox.Show("gelidm2");
+
             FirstGrid.Visibility = Visibility.Collapsed;
             ButtonPanel.Visibility = Visibility.Visible;
-            skill1P.Value = 55;
+            skill1PText.Text = finalResults[0].ToString();
+            skill1P.Value = finalResults[0];
             skill1P.Maximum = 100;
             skill1P.Minimum = 0;
-            skill2P.Value = 55;
+            skill2PText.Text = finalResults[1].ToString();
+            skill2P.Value = finalResults[1];
             skill2P.Maximum = 100;
             skill2P.Minimum = 0;
-            skill3P.Value = 55;
+            skill3PText.Text = finalResults[2].ToString();
+            skill3P.Value = finalResults[2];
             skill3P.Maximum = 100;
             skill3P.Minimum = 0;
-            skill4P.Value = 55;
+            skill4PText.Text = finalResults[3].ToString();
+            skill4P.Value = finalResults[3];
             skill4P.Maximum = 100;
             skill4P.Minimum = 0;
+            //MessageBox.Show("gelidm3");
+            /*
             //TODO
             //Verilerin incelenip yüzdelerin ayarlanıp Result sayfasına geçiş burda olacak
+            Console.WriteLine("Testing MNE.");
+            // 1) Create Process Info
+            var psi2 = new ProcessStartInfo();
+            psi2.FileName = @"C:\Users\serdi\mne-python\1.0.3_0\python.exe";
+
+            // 2) Provide script and arguments
+            var script2 = @"C:\Users\serdi\Desktop\final\brainiac-main\application\BrainiacApp\BrainiacApp\code.py";
+            var fileName2 = userName; //userName olacak, burası değişmeli
+
+            psi2.Arguments = $"\"{script2}\" \"{fileName2}\"";
+
+            // 3) Process configuration
+            psi2.UseShellExecute = false;
+            psi2.CreateNoWindow = true;
+            psi2.RedirectStandardOutput = true;
+            psi2.RedirectStandardError = true;
+
+            // 4) Execute process and get output
+            var errors2 = "";
+            var results2 = "";
+
+            using (var process2 = Process.Start(psi2))
+            {
+                errors2 = process2.StandardError.ReadToEnd();
+                results2 = process2.StandardOutput.ReadToEnd();
+                process2.WaitForExit();
+            }
+       
+
+            // 5) Display output
+            Console.WriteLine("ERRORS:");
+            Console.WriteLine(errors2);
+            Console.WriteLine();
+            Console.WriteLine("Results:");
+            Console.WriteLine(results2);*/
         }
         private void readTicker(object sender, EventArgs e)
         {
@@ -552,7 +828,7 @@ namespace BrainiacApp
 
            
             increment1++;
-            port.ReadExisting();
+            //port.ReadExisting();
             timerTextBlock.Text = increment1.ToString();
             if(currentTest == 1)
             {
@@ -604,6 +880,8 @@ namespace BrainiacApp
             restTimer.Tick += restTicker;
             restTimer.Start();
         }
+
+
         public void initiateTest1()
         {
             currentQuestion++;
@@ -731,11 +1009,7 @@ namespace BrainiacApp
             this.NavigationService.Navigate(pageFunctionUri);
             currentTest = 0;
             currentQuestion = 0;*/
-            foreach (string item in testValues)
-            {
-                Console.WriteLine(item);
-                sw.WriteLine(item);
-            }
+            
             FirstGrid.Visibility = Visibility.Visible;
             ButtonPanel.Visibility = Visibility.Collapsed;
             currentTest = 0;
@@ -745,6 +1019,7 @@ namespace BrainiacApp
             FirstPage.Visibility = Visibility.Visible;
             TestName.Text = "Test";
         }
+
 
     }
 }
