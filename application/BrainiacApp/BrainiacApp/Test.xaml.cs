@@ -9,6 +9,11 @@ using System.Windows.Threading;
 using System.IO.Ports;
 using System.IO;
 using System.Collections;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using FireSharp;
+
 namespace BrainiacApp
 {
     /// <summary>
@@ -34,10 +39,19 @@ namespace BrainiacApp
         public FileStream fs ;
         StreamWriter sw;
         ArrayList testValues = new ArrayList();
+        FirebaseConfig ifc = new FirebaseConfig()
+        {
+            AuthSecret = "wFPZXKJfk6QvvVwmiGuDkIHGYB40Q3YxG86QcZFI",
+            BasePath = "https://brainiacapp-df827-default-rtdb.firebaseio.com/"
+        };
+        FirebaseClient client;
+        int lineCounter = 0;
         public Test()
         {
             InitializeComponent();
             this.FontFamily = new FontFamily("Alata");
+            client = new FirebaseClient(ifc);
+
             test1=new Test1(this);
             test2=new Test2(this);  
             test3=new Test3(this);  
@@ -804,12 +818,17 @@ namespace BrainiacApp
             Console.WriteLine("Results:");
             Console.WriteLine(results2);*/
         }
-        private void readTicker(object sender, EventArgs e)
+        private async void readTicker(object sender, EventArgs e)
         {
             // Memoryde yapılacak
             //sw.WriteLine(currentTest + ";" + port.ReadLine());
             //Console.WriteLine(currentTest + ";" + port.ReadLine());
-            testValues.Add(currentTest+";"+port.ReadLine());
+
+            String dataString = currentTest.ToString() + ";" + port.ReadLine();
+            String path = currentTest.ToString() + "/" + lineCounter.ToString();
+            await client.SetAsync(path, dataString);
+            testValues.Add(dataString);
+            lineCounter++;
             
             increment2 += 0.25;
             if (increment2 == 1.0)
