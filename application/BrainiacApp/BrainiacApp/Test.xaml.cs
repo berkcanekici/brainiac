@@ -137,8 +137,9 @@ namespace BrainiacApp
             }
         }
 
-        private void changeTest()
+        private async void changeTest()
         {
+            await client.DeleteAsync("Data");
             timerProgress.Value = 100;
             currentTest++;
             if(currentTest==1)
@@ -825,7 +826,7 @@ namespace BrainiacApp
             //Console.WriteLine(currentTest + ";" + port.ReadLine());
 
             String dataString = currentTest.ToString() + ";" + port.ReadLine();
-            String path = currentTest.ToString() + "/" + lineCounter.ToString();
+            String path = "Data/"+ currentTest.ToString() + "/" + lineCounter.ToString();
             await client.SetAsync(path, dataString);
             testValues.Add(dataString);
             lineCounter++;
