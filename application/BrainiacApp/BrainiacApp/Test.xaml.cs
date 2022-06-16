@@ -137,14 +137,13 @@ namespace BrainiacApp
             }
         }
 
-        private async void changeTest()
+        private void changeTest()
         {
-            await client.DeleteAsync("Data");
             timerProgress.Value = 100;
             currentTest++;
             if(currentTest==1)
             {
-               
+                client.DeleteAsync("Data");
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
                 QuestionFrame.NavigationService.Navigate(test1);
@@ -532,6 +531,7 @@ namespace BrainiacApp
                     
                     if (increment == 40) {
                         GeriSayim.Stop();
+                        currentTest++;
                         endTest();
                     }
                 }
@@ -819,7 +819,7 @@ namespace BrainiacApp
             Console.WriteLine("Results:");
             Console.WriteLine(results2);*/
         }
-        private async void readTicker(object sender, EventArgs e)
+        private void readTicker(object sender, EventArgs e)
         {
             // Memoryde yapılacak
             //sw.WriteLine(currentTest + ";" + port.ReadLine());
@@ -827,9 +827,12 @@ namespace BrainiacApp
 
             String dataString = currentTest.ToString() + ";" + port.ReadLine();
             String path = "Data/"+ currentTest.ToString() + "/" + lineCounter.ToString();
-            await client.SetAsync(path, dataString);
-            testValues.Add(dataString);
-            lineCounter++;
+            if (currentTest != 0 && currentTest != 6)
+            {
+                client.SetAsync(path, dataString);
+                testValues.Add(dataString);
+                lineCounter++;
+            }
             
             increment2 += 0.25;
             if (increment2 == 1.0)
