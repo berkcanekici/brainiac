@@ -1033,14 +1033,14 @@ namespace BrainiacApp
             currentTest = 0;
             currentQuestion = 0;*/
             
-            FirstGrid.Visibility = Visibility.Visible;
+            /*FirstGrid.Visibility = Visibility.Visible;
             ButtonPanel.Visibility = Visibility.Collapsed;
             currentTest = 0;
             currentQuestion = 0;
             QuestionFrame.Visibility = Visibility.Collapsed;
             LeftBar.Visibility = Visibility.Collapsed;
             FirstPage.Visibility = Visibility.Visible;
-            TestName.Text = "Test";
+            TestName.Text = "Test";*/
         }
 
 
