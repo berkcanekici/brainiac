@@ -755,13 +755,13 @@ namespace BrainiacApp
 
             //MessageBox.Show("gelidm1");
             if (finalResults[0] > 100)
-                resultsInt[0] = 100;
+                finalResults[0] = 100;
             if (finalResults[1] > 100)
-                resultsInt[1] = 100;
+                finalResults[1] = 100;
             if (finalResults[2] > 100)
-                resultsInt[2] = 100;
+                finalResults[2] = 100;
             if (finalResults[3] > 100)
-                resultsInt[3] = 100;
+                finalResults[3] = 100;
 
             skill1Res.Text = "According to our test, your skill level is %" + finalResults[0].ToString() + ". To test this we have observed your \nvisual cortex during related tasks. The activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
             skill2Res.Text = "According to our test, your skill level is %" + finalResults[1].ToString() + ". To test this we have observed your \npreforontal cortex during related tasks. The activation levels can be found in the graph. \nAccording to our findings, you are above average at this skill.If you want to learn more \nabout what that means, you can check About Skills.";
