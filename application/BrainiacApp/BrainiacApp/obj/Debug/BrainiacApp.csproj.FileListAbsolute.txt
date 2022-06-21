@@ -402,3 +402,17 @@ C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\JADE\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.App.config
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\FireSharp.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\obj\Debug\BrainiacApp.csproj.App.config
