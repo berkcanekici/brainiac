@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainiacApp", "BrainiacApp\BrainiacApp.csproj", "{1A06EE66-C4DD-46DB-A066-2F0661873CF2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{F52697D4-CBB3-4D17-A577-F5AC61EA2D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{1A06EE66-C4DD-46DB-A066-2F0661873CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A06EE66-C4DD-46DB-A066-2F0661873CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A06EE66-C4DD-46DB-A066-2F0661873CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52697D4-CBB3-4D17-A577-F5AC61EA2D9D}.Debug|Any CPU.ActiveCfg = Debug
+		{F52697D4-CBB3-4D17-A577-F5AC61EA2D9D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

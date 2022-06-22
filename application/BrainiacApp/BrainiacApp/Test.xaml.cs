@@ -13,6 +13,8 @@ using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
 using FireSharp;
+using Microsoft.Win32;
+
 
 namespace BrainiacApp
 {
@@ -36,6 +38,7 @@ namespace BrainiacApp
         DispatcherTimer GeriSayim;
         DispatcherTimer restTimer;
         DispatcherTimer readTimer;
+        int counter = 0;
         public FileStream fs ;
         StreamWriter sw;
         ArrayList testValues = new ArrayList();
@@ -149,8 +152,6 @@ namespace BrainiacApp
                 QuestionFrame.NavigationService.Navigate(test1);
                 TestName.Text = "Mental Imagery Test";
                 testNo.Text = "1";
-               
-
             }
             else if(currentTest==2)
             {
@@ -567,6 +568,7 @@ namespace BrainiacApp
             // 4) Execute process and get output
             var errors = "";
             var results = "";
+
             using (var process = Process.Start(psi)) {
                 errors = process.StandardError.ReadToEnd();
                 results = process.StandardOutput.ReadToEnd();
@@ -835,12 +837,16 @@ namespace BrainiacApp
             //Console.WriteLine(currentTest + ";" + port.ReadLine());
 
             String dataString = currentTest.ToString() + ";" + port.ReadLine();
-            String path = "Data/"+ currentTest.ToString() + "/" + lineCounter.ToString();
+            String path = "Data/" + "A";
             if (currentTest != 0 && currentTest != 6)
             {
-                client.SetAsync(path, dataString);
+                if(counter%10==0)
+                    client.SetAsync(path, dataString);
+                
+                
                 testValues.Add(dataString);
                 lineCounter++;
+                counter++;
             }
             
             increment2 += 0.25;
@@ -850,10 +856,6 @@ namespace BrainiacApp
                 readTimer.Stop();
                 
             }
-            
-
-            
-            
         }
         private void restTicker(object sender, EventArgs e)
         {
