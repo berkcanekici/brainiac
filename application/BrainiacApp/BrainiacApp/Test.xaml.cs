@@ -112,9 +112,6 @@ namespace BrainiacApp
         {
             if(NameEnterBox.Text!=String.Empty)
             {
-                
-
-
                 port.BaudRate = 9600;
                 port.PortName = PortComboBox.Text;
                 port.Open();
@@ -126,6 +123,9 @@ namespace BrainiacApp
                 QuestionFrame.Visibility = Visibility.Visible;
                 currentQuestion = 0;
                 remainingInCurrentTest = 5;
+
+                //TestCleaning testCleaning = new TestCleaning("samet nalbant");
+
                 changeTest();
                 increment = 0;
                 increment1 = 0;
@@ -136,6 +136,8 @@ namespace BrainiacApp
                 timerProgress.Minimum = 0;
                 timerProgress.Maximum = 12;
                 timerProgress.Value = 100;
+
+
 
             }
         }
@@ -550,14 +552,16 @@ namespace BrainiacApp
             sw.Close();
             fs.Close();
 
-            
+            TestCleaning testCleaning = new TestCleaning(userName);
+
+            /*
             // BURAK
             Console.WriteLine("Testing smth.");
             // 1) Create Process Info
             var psi = new ProcessStartInfo();
             psi.FileName = @"C:\Users\serdi\mne-python\1.0.3_0\python.exe";
             // 2) Provide script and arguments
-            var script = @"C:\Users\serdi\Desktop\final\brainiac-main\application\BrainiacApp\BrainiacApp\user_mean.py";
+            var script = @"C:\Users\serdi\Documents\GitHub\brainiac\application\BrainiacApp\BrainiacApp\bin\Debug\user_mean.py";
             var fileName = userName; // userName olacak çünkü hardco.
             psi.Arguments = $"\"{script}\" \"{fileName}\"";
             // 3) Process configuration
@@ -573,6 +577,7 @@ namespace BrainiacApp
                 errors = process.StandardError.ReadToEnd();
                 results = process.StandardOutput.ReadToEnd();
             }
+            
 
             // 5) Display output
             Console.WriteLine("ERRORS:");
@@ -581,20 +586,42 @@ namespace BrainiacApp
             Console.WriteLine("Results:");
             Console.WriteLine(results);
             //MessageBox.Show(errors);
+            */
+
+            FileStream resultFile = new FileStream("results.csv", FileMode.Open);
+            StreamReader srResult = new StreamReader(resultFile);
+
+            string results = srResult.ReadToEnd();
+
+            srResult.Close();
+            resultFile.Close();
 
             string[] resultSplit = results.Split('\n');
             double[] resultsInt = new double[4];
             NumberFormatInfo provider = new NumberFormatInfo();
             provider.NumberDecimalSeparator = ".";
-            resultsInt[0] = Convert.ToDouble(resultSplit[2], provider);
-            resultsInt[1] = Convert.ToDouble(resultSplit[4], provider);
-            resultsInt[2] = Convert.ToDouble(resultSplit[6], provider);
-            resultsInt[3] = Convert.ToDouble(resultSplit[8], provider);
+
+            for (int i = 0; i < resultSplit.Length - 1; i++)
+            {
+                string num = "";
+                for (int j = 0; j < resultSplit[i].Length; j++)
+                {
+                    if (resultSplit[i][j] == ',')
+                    {
+                        break;
+                    }
+
+                    num += resultSplit[i][j];
+                }
+
+                resultsInt[i] = Convert.ToDouble(num, provider);
+            }
 
             /*MessageBox.Show(resultSplit[2]);
             MessageBox.Show(resultSplit[4]);
             MessageBox.Show(resultSplit[6]);
             MessageBox.Show(resultSplit[8]);*/
+
             resultsInt[0] += 5;
             if (test3.Results[0] == 3)
                 resultsInt[1] += 1.5f;
@@ -790,6 +817,8 @@ namespace BrainiacApp
             skill4P.Value = finalResults[3];
             skill4P.Maximum = 100;
             skill4P.Minimum = 0;
+
+
             //MessageBox.Show("gelidm3");
             /*
             //TODO
